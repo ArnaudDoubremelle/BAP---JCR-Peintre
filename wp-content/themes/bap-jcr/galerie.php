@@ -61,6 +61,8 @@
 <?php $my_query = new WP_Query(array('post_type' => 'galerie', 'posts_per_page' => '4')); ?>
 <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
     <?php the_post_thumbnail('', array('class' => 'img-responsive')); ?>
+    <br>
+    <a href="<?php echo get_permalink(); ?>">Detail</a>
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

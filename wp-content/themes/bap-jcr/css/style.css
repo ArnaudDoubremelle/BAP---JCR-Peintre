@@ -59,3 +59,15 @@ body {
   width: 250px;
   height: 100px
 }
+
+
+.imgcenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.singlepaint {
+  background-color: #CECECE;
+}
