@@ -4,7 +4,7 @@
   <?php $id = get_the_ID(); ?>
   <div class="singlepaint">
     <h3><?php the_title(); ?></h3>
-    <?php the_post_thumbnail('', array('class' => 'imgcenter img-responsive')); ?>
+      <?php the_post_thumbnail('', array('class' => 'imgcenter img-responsive')); ?>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 col-sm-12">
