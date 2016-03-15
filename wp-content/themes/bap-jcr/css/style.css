@@ -11,7 +11,7 @@ body {
 {
   margin-bottom: 0;
   padding: 0 40px 30px 40px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 /* Previous button  */
 .media-carousel .carousel-control.left
@@ -56,8 +56,9 @@ body {
 }
 .media-carousel img
 {
-  width: 250px;
-  height: 100px
+ box-shadow: 1px 5px 12px #313131;
+    margin-bottom:15px;
+    margin-right:20px;
 }
 
 
