@@ -18,10 +18,10 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php if (is_single() ):?>class="single"<?php endif; ?>>
 <!-- Header -->
 <header id="top" class="header">
     <nav id="navigation">
-        <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
+        <!-- <?php wp_nav_menu(array('theme_location' => 'principal')); ?> -->
     </nav>
 </header>

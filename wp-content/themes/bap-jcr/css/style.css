@@ -5,7 +5,10 @@ body {
   height: 100%;
   background: url("../img/back_gallery.png") no-repeat left bottom;
 }
-
+body.single {
+  background-color: #b8b7b7;
+  background: none;
+}
 /* Slider */
 .media-carousel
 {
@@ -60,15 +63,17 @@ body {
     margin-bottom:15px;
     margin-right:20px;
 }
-
-
-.imgcenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 30px;
-}
-
 .singlepaint {
-  background-color: #CECECE;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.singlepaint p {
+  text-align: center !important;
+  margin: 0;
+}
+.imgcenter {
+  width: 100%;
 }
