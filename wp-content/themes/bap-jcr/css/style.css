@@ -1,10 +1,4 @@
-html {
-  height: 100%;
-}
-body {
-  height: 100%;
-  background: url("../img/back_gallery.png") no-repeat left bottom;
-}
+
 body.single {
   background-color: #b8b7b7;
   background: none;
@@ -76,4 +70,116 @@ body.single {
 }
 .imgcenter {
   width: 100%;
+}
+/*HOME*/
+/*ACCUEIL*/
+.bacceuil{
+  background-color: #363636;
+  height: 100vh;
+}
+/*MARGIN*/
+.mgt-50 {
+  margin-top: 50px;
+}
+.mgt-80{
+  margin-top: 80px;
+}
+/*PADDING*/
+.pdb-50{
+  padding-bottom: 50px;
+}
+/*BIOGRAPHIE*/
+.backgroundgris{
+  background-color: #dbdbdb;
+  height:100vh;
+}
+
+
+.backgroundbiographie{
+  background-image: url('../img/backgroundbio.png');
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+}
+.biographie p{
+  font-size: 1.5em;
+}
+/*MENU*/
+
+.open-menu{
+  cursor: pointer;
+  position: inherit;
+  color: white;
+}
+.open{
+  cursor: pointer;
+  position: inherit;
+  color: white;
+}
+.nav-menu {
+
+  right: -400px;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  background-color: #363636;
+}
+.nav-menu ul {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+.menu-menu-side-container{
+  margin-top: 80px;
+}
+
+.nav-menu li {
+
+  padding-bottom: 3px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.nav-menu a {
+  color: #ACACAC;
+  font-size: 1.8em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-menu .current-menu-item a {
+  color: white;
+
+}
+.main-navigation .current-menu-parent > a {
+  background-color: #ddd;
+  border-top: 3px solid #222;
+  padding-top: 17px;
+}
+/**/
+.icon-close {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.icon-close:hover {
+  opacity: 1;
+}
+
+.icon-close:before,
+.icon-close:after {
+  position: absolute;
+
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+
+.icon-close:before {
+  transform: rotate(45deg);
+}
+
+.icon-close:after {
+  transform: rotate(-45deg);
 }
