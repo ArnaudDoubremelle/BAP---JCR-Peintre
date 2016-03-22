@@ -20,3 +20,8 @@
 
 <body <?php if (is_single() ):?>class="single"<?php endif; ?>>
 <!-- Header -->
+<?php if (!is_page('home') ):?>
+    <div class="container">
+        <h1>Jean-Christophe Reneaux</h1>
+    </div>
+<?php endif; ?>

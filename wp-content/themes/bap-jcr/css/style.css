@@ -3,13 +3,25 @@ html, body {
   height: 100%;
 }
 body {
-  background: url("../img/back_gallery.png") no-repeat left bottom;
+  background: url("../img/back_gallery.png") no-repeat left top;
+  background-size: 100% 100%;
 }
 body.single {
-  background-color: #b8b7b7;
-  background: none;
+  background-size: cover;
+}
+.galerie {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 /* Slider */
+.carousel-inner {
+  overflow: visible;
+}
 .media-carousel
 {
   margin-bottom: 0;
@@ -73,7 +85,9 @@ body.single {
   margin: 0;
 }
 .imgcenter {
-  width: 100%;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 /*HOME*/
 /*ACCUEIL*/
