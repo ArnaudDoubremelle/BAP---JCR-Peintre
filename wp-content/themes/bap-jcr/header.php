@@ -35,7 +35,7 @@
         </nav>
         <div id="page-content-wrapper">
             <div class="container">
-                <h1><i class="icon-menu fa fa-bars" data-toggle="offcanvas"></i> Jean-Christophe Reneaux</h1>
+                <h1><i class="icon-menu fa fa-bars" data-toggle="offcanvas"></i> Jean-Christophe Renaux</h1>
             </div>
         </div>
     </div>

@@ -21,6 +21,16 @@ function create_post_type() {
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+    register_post_type('carnet',
+        array(
+            'labels' => array(
+                'name' => 'Carnet',
+                'singular_name' => 'Carnet'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
 }
 //Le jquery
 wp_enqueue_script("jquery");
