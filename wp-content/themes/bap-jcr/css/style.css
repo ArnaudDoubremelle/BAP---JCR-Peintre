@@ -7,13 +7,16 @@ body {
   background-size: 100% 100%;
   overflow-x: hidden;
 }
+
 body.single {
   background-size: cover;
 }
 h1 {
   display: inline-block;
 }
+/* galerie */
 .galerie {
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -21,6 +24,25 @@ h1 {
   width: 100%;
   transform: translate(-50%, -50%);
   overflow: hidden;
+}
+/* carnet */
+.carnet {
+  background: url("../img/back_carnet.jpg");
+  background-size:cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  padding-top:6%;
+}
+
+.carnet h1{
+  color:#fff;
+  left:10%;
+
 }
 /* Slider */
 .carousel-inner {
@@ -53,6 +75,28 @@ h1 {
   margin-top: 30px;
   font-size: 60px;
   color: #151515;
+}
+/* Previous button page carnet  */
+.carnet .media-carousel .carousel-control.left
+{
+  left: -12px;
+  background-image: none;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px;
+  font-size: 60px;
+  color: #fff;
+}
+/* Next button  page carnet*/
+.carnet .media-carousel .carousel-control.right
+{
+  right: -12px !important;
+  background-image: none;
+  height: 40px;
+  width : 40px;
+  margin-top: 30px;
+  font-size: 60px;
+  color: #fff;
 }
 /* Changes the position of the indicators */
 .media-carousel .carousel-indicators
@@ -255,6 +299,11 @@ h1 {
 #page-content-wrapper {
   width: 100%;
 }
+
+#page-content-wrapper #carnet h1{
+  color:#fff;
+}
+
 .sidebar-nav {
   list-style: none;
   margin: 0;
@@ -343,4 +392,18 @@ h1 {
 .icon-menu {
   position: relative;
   z-index: 999;
+}
+
+/* header carnet */
+
+.carnet_header .icon-menu {
+  position: relative;
+  z-index: 999;
+  color:#fff;
+}
+
+.carnet_header h1 {
+  position: relative;
+  z-index: 999;
+  color:#fff;
 }
