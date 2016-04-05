@@ -1,20 +1,20 @@
 <?php
 /*
-    Template Name: carnet
+    Template Name: carnets
 */
 ?>
-<?php get_header("carnet"); ?>
+<?php get_header()?>
 
 <!-- Main -->
 
-<div class="container-fluid carnet">
+<div class="container-fluid">
     <div class='row'>
         <div class='col-md-12'>
             <div class="carousel slide media-carousel" id="media">
 
                 <div class="carousel-inner">
                     <?php $first = 1;
-                    $my_query = new WP_Query(array('post_type' => 'carnet')); ?>
+                    $my_query = new WP_Query(array('post_type' => 'carnets')); ?>
                     <?php while ($my_query->have_posts()) :
                     $my_query->the_post(); ?>
                     <?php if ($first == '1') : ?>

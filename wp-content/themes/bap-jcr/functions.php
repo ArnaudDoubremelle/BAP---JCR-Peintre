@@ -1,6 +1,10 @@
 <?php
+// Cacher la barre admin
+show_admin_bar(false);
+
 //Ajout Side Menu
 register_nav_menu('side', 'Menu side');
+
 // Ajouter les images à la une sur les articles
 add_theme_support( 'post-thumbnails' );
 
@@ -11,21 +15,21 @@ register_nav_menu('principal', 'Menu principal');
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
     // Dupliquer le register_post_type pour ajouter d'autres CPT
-    register_post_type('galerie',
+    register_post_type('peintures',
         array(
             'labels' => array(
-                'name' => 'Galerie',
-                'singular_name' => 'Galerie'
+                'name' => 'Peintures',
+                'singular_name' => 'Peintures'
             ),
             'public' => true,
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
-    register_post_type('carnet',
+    register_post_type('carnets',
         array(
             'labels' => array(
-                'name' => 'Carnet',
-                'singular_name' => 'Carnet'
+                'name' => 'Carnets',
+                'singular_name' => 'Carnets'
             ),
             'public' => true,
             'supports' => array('thumbnail', 'editor', 'title')
@@ -46,23 +50,10 @@ function theme_js(){
 }
 add_action( 'wp_footer', 'theme_js' );
 
-/*Script JS pour le menu JS*/
-function menu_js(){
-
-    wp_register_script( 'menu',
-        get_template_directory_uri() . '/js/menu.js',
-        array() );
-    if (!is_home()) {
-        wp_enqueue_script('menu');
-    }
-
-}
-add_action( 'wp_footer', 'menu_js' );
-
 /*Custom categorie*/
 register_taxonomy(
     'categorie',
-    'galerie',
+    'peintures',
     array(
         'label' => 'Categories',
         'labels' => array(
@@ -79,4 +70,4 @@ register_taxonomy(
         ),
         'hierarchical' => false   ) );
 
-register_taxonomy_for_object_type( 'categorie', 'galerie' );
+register_taxonomy_for_object_type( 'categorie', 'peintures' );

@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: galerie
+    Template Name: peintures
 */
 ?>
 <?php get_header(); ?>
@@ -13,7 +13,7 @@
 
                 <div class="carousel-inner">
                     <?php $first = 1;
-                    $my_query = new WP_Query(array('post_type' => 'galerie')); ?>
+                    $my_query = new WP_Query(array('post_type' => 'peintures')); ?>
                     <?php while ($my_query->have_posts()) :
                     $my_query->the_post(); ?>
                     <?php if ($first == '1') : ?>

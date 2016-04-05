@@ -10,33 +10,35 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
-
-    <!-- Font-Awesome -->
     <link href="<?php bloginfo( 'template_directory' ); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
 
     <?php wp_head(); ?>
 </head>
 
-<body <?php if (is_single() ):?>class="single"<?php endif; ?>>
+<body <?php if (is_single() || is_page('contact') || is_page('biographie') ) : ?>
+                class="other-back"
+            <?php elseif ( is_page('carnets') ) : ?>
+                class="carnet"
+            <?php endif ; ?>>
 <!-- Header -->
 <?php if (!is_page('home') ):?>
     <div id="wrapper" class="">
         <div class="overlay" style="display: none;"></div>
         <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
-                <li>
-                    <a href="https://github.com/FragCoder/bootstrap-left-slide-menu"><i class="glyphicon glyphicon-camera"></i> Photo</a>
-                </li>
-                <li>
-                    <a href="https://github.com/FragCoder/bootstrap-left-slide-menu"><i class="glyphicon glyphicon-facetime-video"></i> Video</a>
-                </li>
+                <?php if ( is_super_admin() ):?>
+                    <li>
+                        <a href="<?php echo get_dashboard_url(); ?>"><i class="fa fa-tachometer"></i> Tableau de bord</a>
+                    </li>
+                <?php endif; ?>
             </ul>
+            <?php wp_nav_menu(); ?>
+
         </nav>
         <div id="page-content-wrapper">
-            <div class="container">
-                <h1><i class="icon-menu fa fa-bars" data-toggle="offcanvas"></i> Jean-Christophe Renaux</h1>
-            </div>
+            <i class="icon-menu fa fa-bars" data-toggle="offcanvas"></i>
         </div>
+        <h1>Jean-Christophe Renaux</h1>
     </div>
 <?php endif; ?>

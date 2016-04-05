@@ -13,10 +13,10 @@
         </div>
         <div class="row">
             <div class="col-md-offset-5 col-md-1">
-                <a href="galerie"><img src="<?php bloginfo('template_directory') ?>/img/fr.jpg" class="img-responsive" alt="drapeau_fr"></a>
+                <a href="peintures"><img src="<?php bloginfo('template_directory') ?>/img/fr.jpg" class="img-responsive" alt="drapeau_fr"></a>
             </div>
             <div class="col-md-1">
-                <a href="galerie"><img src="<?php bloginfo('template_directory') ?>/img/en.jpg" class="img-responsive" alt="drapeau_en"></a>
+                <a href="peintures"><img src="<?php bloginfo('template_directory') ?>/img/en.jpg" class="img-responsive" alt="drapeau_en"></a>
             </div>
         </div>
     </div>

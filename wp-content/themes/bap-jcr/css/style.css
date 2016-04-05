@@ -8,10 +8,12 @@ body {
   overflow-x: hidden;
 }
 
-body.single {
+body.other-back  {
   background-size: cover;
+  background-attachment: fixed;
 }
 h1 {
+  margin-left: 50px;
   display: inline-block;
 }
 /* galerie */
@@ -28,21 +30,13 @@ h1 {
 /* carnet */
 .carnet {
   background: url("../img/back_carnet.jpg");
-  background-size:cover;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  padding-top:6%;
 }
 
 .carnet h1{
   color:#fff;
-  left:10%;
-
+}
+.carnet .icon-menu {
+  color: #fff;
 }
 /* Slider */
 .carousel-inner {
@@ -77,25 +71,8 @@ h1 {
   color: #151515;
 }
 /* Previous button page carnet  */
-.carnet .media-carousel .carousel-control.left
+.carnet .media-carousel .carousel-control.left, .carnet .media-carousel .carousel-control.right
 {
-  left: -12px;
-  background-image: none;
-  height: 40px;
-  width : 40px;
-  margin-top: 30px;
-  font-size: 60px;
-  color: #fff;
-}
-/* Next button  page carnet*/
-.carnet .media-carousel .carousel-control.right
-{
-  right: -12px !important;
-  background-image: none;
-  height: 40px;
-  width : 40px;
-  margin-top: 30px;
-  font-size: 60px;
   color: #fff;
 }
 /* Changes the position of the indicators */
@@ -261,7 +238,7 @@ h1 {
 
 /* test */
 #wrapper {
-  padding-left: 0;
+  padding-right: 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -269,20 +246,21 @@ h1 {
   transition: all 0.5s ease;
 }
 #wrapper.toggled {
-  padding-left: 220px;
+  padding-right: 220px;
 }
 #wrapper.toggled #sidebar-wrapper {
   width: 220px;
 }
 #wrapper.toggled #page-content-wrapper {
-  margin-right: -220px;
-  position: absolute;
+  /*margin-left: -220px;*/
+  /*position: absolute;*/
 }
 #sidebar-wrapper {
   background: #1a1a1a;
   height: 100%;
-  left: 220px;
-  margin-left: -220px;
+  right: 220px;
+  left: auto;
+  margin-right: -220px;
   overflow-x: hidden;
   overflow-y: auto;
   -moz-transition: all 0.5s ease;
@@ -298,6 +276,7 @@ h1 {
 }
 #page-content-wrapper {
   width: 100%;
+  transition: all 0.5s ease;
 }
 
 #page-content-wrapper #carnet h1{
@@ -305,43 +284,12 @@ h1 {
 }
 
 .sidebar-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
   width: 220px;
 }
 .sidebar-nav li {
   display: inline-block;
   line-height: 20px;
   position: relative;
-  width: 100%;
-}
-.sidebar-nav li:before {
-  background-color: #1c1c1c;
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  -webkit-transition: width 0.2s ease-in;
-  -moz-transition: width 0.2s ease-in;
-  -ms-transition: width 0.2s ease-in;
-  -o-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
-  width: 3px;
-  z-index: -1;
-}
-.sidebar-nav li:before {
-  background-color: #6bb4e7;
-}
-.sidebar-nav li:hover:before {
-  -webkit-transition: width 0.2s ease-in;
-  -moz-transition: width 0.2s ease-in;
-  -ms-transition: width 0.2s ease-in;
-  -o-transition: width 0.2s ease-in;
-  transition: width 0.2s ease-in;
   width: 100%;
 }
 .sidebar-nav li a {
@@ -390,20 +338,29 @@ h1 {
   z-index: 1;
 }
 .icon-menu {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-right: 50px;
+  float: right;
   position: relative;
   z-index: 999;
 }
-
-/* header carnet */
-
-.carnet_header .icon-menu {
-  position: relative;
-  z-index: 999;
-  color:#fff;
+.menu-principal-container ul {
+  margin: 0;
+  padding: 0;
 }
-
-.carnet_header h1 {
+.menu-principal-container ul li {
+  display: inline-block;
+  line-height: 20px;
   position: relative;
-  z-index: 999;
-  color:#fff;
+  width: 100%;
+}
+.menu-principal-container ul li:hover {
+  background-color: #333333;
+}
+.menu-principal-container ul li a {
+  color: #dddddd;
+  display: block;
+  padding: 10px 15px 10px 30px;
+  text-decoration: none;
 }
