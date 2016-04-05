@@ -7,9 +7,6 @@ Template Name: biographie
 <body>
 <div class="container-fluid  backgroundgris ">
     <div class="row">
-        <?php get_template_part('menu-template');?>
-    </div>
-    <div class="row">
       <div class="col-xs-10 col-xs-offset-1 backgroundbiographie mgt-80 ">
           <div class="row">
               <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
