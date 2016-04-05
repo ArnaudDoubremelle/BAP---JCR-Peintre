@@ -16,15 +16,19 @@ h1 {
   margin-left: 50px;
   display: inline-block;
 }
+a {
+  color: #333;
+}
+a:hover, a:focus {
+  color: #333;
+  text-decoration: none;
+}
 /* galerie */
 .galerie {
-
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25%;
   height: auto;
   width: 100%;
-  transform: translate(-50%, -50%);
   overflow: hidden;
 }
 /* carnet */
@@ -35,7 +39,7 @@ h1 {
 .carnet h1{
   color:#fff;
 }
-.carnet .icon-menu {
+.carnet .link-menu {
   color: #fff;
 }
 /* Slider */
@@ -51,22 +55,24 @@ h1 {
 /* Previous button  */
 .media-carousel .carousel-control.left
 {
-  left: -12px;
+  bottom: 0;
+  top: auto;
   background-image: none;
+  line-height: 0;
   height: 40px;
   width : 40px;
-  margin-top: 30px;
   font-size: 60px;
   color: #151515;
 }
 /* Next button  */
 .media-carousel .carousel-control.right
 {
-  right: -12px !important;
+  bottom: 0;
+  top: auto;
   background-image: none;
+  line-height: 0;
   height: 40px;
   width : 40px;
-  margin-top: 30px;
   font-size: 60px;
   color: #151515;
 }
@@ -94,9 +100,9 @@ h1 {
 }
 .media-carousel img
 {
- box-shadow: 1px 5px 12px #313131;
-    margin-bottom:15px;
-    margin-right:20px;
+  box-shadow: 1px 5px 12px #313131;
+  width: 70%;
+  margin: 0 auto;
 }
 .singlepaint {
   position: absolute;
@@ -110,8 +116,8 @@ h1 {
   margin: 0;
 }
 .imgcenter {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 /*HOME*/
@@ -337,11 +343,14 @@ h1 {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
-.icon-menu {
-  font-size: 36px;
-  margin-top: 20px;
-  margin-right: 50px;
+.link-menu {
+  font-size: 20px;
   float: right;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-right: 50px;
+}
+.icon-menu {
   position: relative;
   z-index: 999;
 }

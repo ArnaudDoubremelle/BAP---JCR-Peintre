@@ -37,8 +37,8 @@
 
         </nav>
         <div id="page-content-wrapper">
-            <i class="icon-menu fa fa-bars" data-toggle="offcanvas"></i>
+            <a href="#" class="link-menu" data-toggle="offcanvas">MENU <i class="icon-menu fa fa-bars"></i></a>
         </div>
-        <h1>Jean-Christophe Renaux</h1>
+        <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
     </div>
 <?php endif; ?>
