@@ -8,13 +8,13 @@ $(document).ready(function() {
     interval: false,
   });
 
-  var trigger = $('.icon-menu'),
+  var trigger = $('.link-menu'),
       overlay = $('.overlay'),
       isClosed = false;
 
   function buttonSwitch() {
 
-    if (isClosed === true) {
+    if (isClosed == true) {
       overlay.hide();
       isClosed = false;
     } else {
