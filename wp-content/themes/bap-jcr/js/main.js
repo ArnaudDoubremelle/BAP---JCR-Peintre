@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  $(".language").hide();
+  $(".language").delay("12000").fadeIn("slow");
+
   $('#media').carousel({
     pause: true,
     interval: false,
