@@ -3,7 +3,7 @@
     Template Name: carnets
 */
 ?>
-<?php get_header()?>
+<?php get_header() ?>
 
 <!-- Main -->
 
@@ -18,11 +18,11 @@
                     <?php while ($my_query->have_posts()) :
                     $my_query->the_post(); ?>
                     <?php if ($first == '1') : ?>
-                        <?php $first++; ?>
-                        <div class="item active">
-                    <?php else : ?>
+                    <?php $first++; ?>
+                    <div class="item active">
+                        <?php else : ?>
                         <div class="item">
-                    <?php endif; ?>
+                            <?php endif; ?>
                             <div class="row">
                                 <div class="col-md-3 col-xs-3">
                                     <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail('', array('class' => 'img-responsive')); ?></a>
@@ -52,5 +52,6 @@
             </div>
         </div>
     </div>
+</div>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
