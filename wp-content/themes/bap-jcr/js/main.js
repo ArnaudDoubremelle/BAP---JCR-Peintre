@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $(window).load(function() {
+        $("#posts-slider").flexisel({
+            visibleItems: 4
+        });
+    });
+
   $(".language").hide();
   $(".language").delay("12000").fadeIn("slow");
 
