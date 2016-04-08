@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $(window).load(function() {
         $("#posts-slider").flexisel({
-            visibleItems: 4
+            visibleItems: 3
         });
     });
 

@@ -6,8 +6,6 @@
 <?php get_header(); ?>
 
 <!-- Main -->
-
-
 <div class="container-slider">
     <ul id="posts-slider">
         <?php $my_query = new WP_Query(array('post_type' => 'peintures')); ?>

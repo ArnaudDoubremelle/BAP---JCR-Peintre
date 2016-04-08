@@ -151,7 +151,7 @@
                       leftArrow.add(rightArrow).css('visibility', 'visible');
 
                       var halfArrowHeight = (leftArrow.height()) / 2;
-                      var arrowMargin = (innerHeight / 2) - halfArrowHeight;
+                      var arrowMargin = innerHeight + halfArrowHeight;
                       leftArrow.css("top", arrowMargin + "px");
                       rightArrow.css("top", arrowMargin + "px");
                     }

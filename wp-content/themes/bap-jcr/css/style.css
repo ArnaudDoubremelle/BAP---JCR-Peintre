@@ -519,7 +519,7 @@ a:hover, a:focus {
 .nbs-flexisel-item img {
   max-height: none;
   max-width: none;
-  width: 70%;
+  width: 55%;
   margin: 0 auto;
   box-shadow: 1px 5px 12px #313131;
 }
@@ -532,4 +532,10 @@ a:hover, a:focus {
   top: 45%;
   transform: translate(0%, -50%);
   width: 100%;
+}
+.nbs-flexisel-nav-left {
+  left: 45%;
+}
+.nbs-flexisel-nav-right {
+  right: 45%;
 }
