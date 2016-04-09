@@ -8,7 +8,8 @@
         <?php the_post_thumbnail(); ?>
       </div>
       <div class="single-content">
-        <h3><?php the_title(); ?></h3>
+        <h3><?php the_title(); ?></h3><br>
+        <?php the_terms( $post->ID, 'categorie', 'Série : ' ); ?><br></p>
         <?php the_content(); ?>
       </div>
     </div>

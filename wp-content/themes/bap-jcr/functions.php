@@ -37,37 +37,37 @@ function create_post_type() {
     );
 }
 //Le jquery
-wp_enqueue_script("jquery");
+/*wp_enqueue_script("jquery");
 /*Script JS pour la vidéo d'accueil*/
-function theme_js(){
+/*function video_js(){
 
     wp_register_script( 'video',
-        get_template_directory_uri() . '/js/video.js',
+        get_template_directory_uri() . '/js/aaaaa.js',
         array() );
     if (is_home()) {
         wp_enqueue_script('video');
     }
 }
-add_action( 'wp_footer', 'theme_js' );
+add_action( 'wp_footer', 'video_js' );
 
 /*Custom categorie*/
 register_taxonomy(
-    'categorie',
+    'série',
     'peintures',
     array(
-        'label' => 'Categories',
+        'label' => 'Séries',
         'labels' => array(
-            'name' => 'Categories',
+            'name' => 'Séries',
             'singular_name' => 'Categorie',
-            'all_items' => 'Toutes les categories',
-            'edit_item' => 'Éditer la categorie',
-            'view_item' => 'Voir la categorie',
-            'update_item' => 'Mettre à jour la categorie',
-            'add_new_item' => 'Ajouter une categorie',
-            'new_item_name' => 'Nouvelle categorie',
-            'search_items' => 'Rechercher parmi les categories',
-            'popular_items' => 'Categories les plus utilisées'
+            'all_items' => 'Toutes les séries',
+            'edit_item' => 'Éditer la série',
+            'view_item' => 'Voir la série',
+            'update_item' => 'Mettre à jour la série',
+            'add_new_item' => 'Ajouter une série',
+            'new_item_name' => 'Nouvelle série',
+            'search_items' => 'Rechercher parmi les séries',
+            'popular_items' => 'Séries les plus utilisées'
         ),
-        'hierarchical' => false   ) );
+        'hierarchical' => true   ) );
 
-register_taxonomy_for_object_type( 'categorie', 'peintures' );
+register_taxonomy_for_object_type( 'série', 'peintures' );
