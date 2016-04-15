@@ -74,7 +74,7 @@
                 
                 var innerWidth = listParent.width(); // Set widths
                 itemsWidth = (innerWidth) / itemsVisible;
-                childSet.width(itemsWidth);        
+                childSet.width(itemsWidth);
                 if (settings.clone) {
                     childSet.last().insertBefore(childSet.first());
                     childSet.last().insertBefore(childSet.first());
@@ -135,7 +135,7 @@
                     childSet.width(itemsWidth);
                     if (settings.clone) {
                         object.css({
-                            'left' : -itemsWidth                            
+                            'left' : -itemsWidth
                         });
                     }else {
                         object.css({
@@ -257,7 +257,7 @@
                         }, {
                             queue : false,
                             duration : settings.animationSpeed,
-                            easing : "linear",
+                            easing : "ease",
                             complete : function() {
                                 if (settings.clone) {
                                     childSet.last().insertBefore(childSet.first()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)                                   

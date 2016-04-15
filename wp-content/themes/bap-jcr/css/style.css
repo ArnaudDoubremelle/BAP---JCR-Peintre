@@ -420,7 +420,9 @@ a:hover, a:focus {
   font-weight: 600;
   margin-top: 25px;
   margin-right: 50px;
-  outline-color: transparent;
+}
+.link-menu:hover, .link-menu:focus {
+  outline: 0;
 }
 .icon-menu {
   position: relative;
@@ -457,6 +459,7 @@ a:hover, a:focus {
   max-width:100%;
 }
 .nbs-flexisel-ul {
+  display: flex;
   position:relative;
   width:99999px;
   margin:0px;
@@ -466,7 +469,6 @@ a:hover, a:focus {
 }
 
 .nbs-flexisel-inner {
-  overflow:hidden;
   float:left;
   width:100%;
   background:#fcfcfc;
@@ -489,6 +491,7 @@ a:hover, a:focus {
   cursor:pointer;
   position:relative;
   line-height:0px;
+  margin: auto 0;
 }
 .nbs-flexisel-item img {
   width: 100%;
