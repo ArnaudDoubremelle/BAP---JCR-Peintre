@@ -14,7 +14,7 @@ Template Name: biographie
                       <h2 class=""><?php the_title(); ?></h2>
                   </div>
                   <div class="clearfix"></div>
-                  <div class="col-xs-8 col-xs-offset-2 text-center biographie mgt-50 pdb-50">
+                  <div class="col-xs-8 col-xs-offset-2 biographie mgt-50 pdb-50">
                       <?php the_content(); ?>
                   </div>
               <?php endwhile; endif; ?>

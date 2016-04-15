@@ -257,7 +257,7 @@
                         }, {
                             queue : false,
                             duration : settings.animationSpeed,
-                            easing : "ease",
+                            easing : "linear",
                             complete : function() {
                                 if (settings.clone) {
                                     childSet.last().insertBefore(childSet.first()); // Get the first list item and put it after the last list item (that's how the infinite effects is made)                                   
