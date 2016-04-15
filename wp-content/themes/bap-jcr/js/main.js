@@ -15,6 +15,7 @@ $(document).ready(function() {
   });
 
   var trigger = $('.link-menu'),
+      faIcon = $('.icon-menu'),
       overlay = $('.overlay'),
       isClosed = false;
 
@@ -22,9 +23,13 @@ $(document).ready(function() {
 
     if (isClosed == true) {
       overlay.hide();
+      faIcon.removeClass('fa-times');
+      faIcon.addClass('fa-bars');
       isClosed = false;
     } else {
       overlay.show();
+      faIcon.removeClass('fa-bars');
+      faIcon.addClass('fa-times');
       isClosed = true;
     }
   }
