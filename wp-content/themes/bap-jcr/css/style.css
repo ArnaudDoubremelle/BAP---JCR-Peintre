@@ -411,11 +411,16 @@ a:hover, a:focus {
   z-index: 1;
 }
 .link-menu {
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  border: none;
   font-size: 20px;
   float: right;
   font-weight: 600;
   margin-top: 25px;
   margin-right: 50px;
+  outline-color: transparent;
 }
 .icon-menu {
   position: relative;
