@@ -13,12 +13,20 @@ body.other-back  {
   background-attachment: fixed;
 }
 h1 {
-  margin-top: 25px;
+  margin-top: 31px;
   margin-left: 50px;
   display: inline-block;
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    margin-top: 33px;
+    font-size: 16px;
+  }
+
 }
 a {
   line-height: 0;
@@ -424,6 +432,17 @@ a:hover, a:focus {
 .link-menu:hover, .link-menu:focus {
   outline: 0;
 }
+.txt-menu {
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+  .txt-menu {
+    margin: 0;
+    display: none;
+  }
+}
 .icon-menu {
   position: relative;
   z-index: 999;
@@ -547,4 +566,22 @@ a:hover, a:focus {
 }
 .nbs-flexisel-nav-right {
   right: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .nbs-flexisel-nav-right {
+    right: 35%;
+  }
+  .nbs-flexisel-nav-left {
+      left: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .nbs-flexisel-nav-right {
+    right: 40%;
+  }
+  .nbs-flexisel-nav-left {
+      left: 40%;
+  }
+
 }
