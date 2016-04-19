@@ -52,22 +52,22 @@ add_action( 'wp_footer', 'video_js' );
 
 /*Custom categorie*/
 register_taxonomy(
-    'série',
+    'categories',
     'peintures',
     array(
-        'label' => 'Séries',
+        'label' => 'Catégories',
         'labels' => array(
-            'name' => 'Séries',
+            'name' => 'Catégories',
             'singular_name' => 'Categorie',
-            'all_items' => 'Toutes les séries',
-            'edit_item' => 'Éditer la série',
-            'view_item' => 'Voir la série',
-            'update_item' => 'Mettre à jour la série',
-            'add_new_item' => 'Ajouter une série',
-            'new_item_name' => 'Nouvelle série',
-            'search_items' => 'Rechercher parmi les séries',
-            'popular_items' => 'Séries les plus utilisées'
+            'all_items' => 'Toutes les catégories',
+            'edit_item' => 'Éditer la catégories',
+            'view_item' => 'Voir la catégories',
+            'update_item' => 'Mettre à jour la catégories',
+            'add_new_item' => 'Ajouter une catégories',
+            'new_item_name' => 'Nouvelle catégories',
+            'search_items' => 'Rechercher parmi les catégories',
+            'popular_items' => 'Catégories les plus utilisées'
         ),
         'hierarchical' => true   ) );
 
-register_taxonomy_for_object_type( 'série', 'peintures' );
+register_taxonomy_for_object_type( 'categories', 'peintures' );
