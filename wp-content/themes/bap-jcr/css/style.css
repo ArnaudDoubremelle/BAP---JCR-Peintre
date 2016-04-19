@@ -284,6 +284,9 @@ a:hover, a:focus {
   border-top: 3px solid #222;
   padding-top: 17px;
 }
+.sub-menu {
+
+}
 /**/
 .icon-close {
   position: absolute;
@@ -465,6 +468,16 @@ a:hover, a:focus {
   display: block;
   padding: 15px 15px 15px 30px;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sub-menu li a {
+  margin-left: 20px;
+  text-transform: none !important;
+  font-weight: normal !important;
+}
+.sub-menu li:hover {
+  background-color: #4C4C4C !important;
 }
 
 
