@@ -38,7 +38,7 @@
 
         </nav>
         <div id="page-content-wrapper">
-            <button  class="link-menu" data-toggle="offcanvas">MENU <i class="icon-menu fa fa-bars"></i></button>
+            <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu">MENU</span><i class="icon-menu fa fa-bars"></i></button>
         </div>
         <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
     </div>
