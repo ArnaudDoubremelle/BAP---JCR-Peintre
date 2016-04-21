@@ -7,10 +7,10 @@ Template Name: biographie
 <body>
 <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-10 col-xs-offset-1 backgroundbiographie">
+      <div class="col-xs-8 col-xs-offset-2 backgroundbiographie">
           <div class="row">
               <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                  <div class="col-xs-12 text-center mgt-80">
+                  <div class="col-xs-12 text-center">
                       <h2 class=""><?php the_title(); ?></h2>
                   </div>
                   <div class="clearfix"></div>

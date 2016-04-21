@@ -219,16 +219,17 @@ a:hover, a:focus {
   padding-bottom: 50px;
 }
 /*BIOGRAPHIE*/
-.backgroundgris{
+.backgroundgris {
   background-color: #dbdbdb;
   height:100vh;
 }
 
 
 .backgroundbiographie{
-  background-image: url('../img/backgroundbio.png');
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  background-color: #fff;
+  box-shadow: 1px 5px 12px #313131;
 }
 .biographie p{
   font-size: 1em;
