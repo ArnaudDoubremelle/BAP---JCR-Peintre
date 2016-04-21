@@ -25,10 +25,7 @@
 <div class="capture-video-jcr">
     <video src="<?php bloginfo('template_directory') ?>/video/video_accueil_3_v2.mp4" muted="true" autoplay="true"></video>
     <div class="language">
-        <a href="peintures" class="btn btn-custom">Français</a>
-        <a href="peintures" class="btn btn-custom">English</a>
-<!--        <a href="peintures"><img src="--><?php //bloginfo('template_directory') ?><!--/img/en.jpg" class="img-responsive" alt="drapeau_en"></a>-->
-<!--        <a href="peintures"><img src="--><?php //bloginfo('template_directory') ?><!--/img/fr.jpg" class="img-responsive" alt="drapeau_fr"></a>-->
+        <a href="peintures" class="btn btn-custom"><img src="<?php bloginfo('template_directory') ?>/img/door.png" alt=""></a>
     </div>
 </div>
 
