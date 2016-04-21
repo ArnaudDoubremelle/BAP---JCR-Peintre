@@ -261,10 +261,11 @@ function qtranxf_add_language_menu_item(&$items, &$menu_order, &$itemid, $key, $
 	}
 	if($topflag){
 		if(!empty($item->title)){
-			if($colon) $item->title.=_x(':', 'Colon after a title. For example, in top item of Language Menu.', 'qtranslate');
-			$item->title.='&nbsp;';
+			if($colon) $item->title.=_x('', 'Colon after a title. For example, in top item of Language Menu.', 'qtranslate');
+			$item->title.='';
 		}
-		$item->title.='<img src="'.$flag_location.$q_config['flag'][$toplang].'" alt="'.$q_config['language_name'][$toplang].'" />';//.' '.__('Flag', 'qtranslate')
+		$item->title.='';//.' '.__('Flag', 'qtranslate')
+//		<img src="'.$flag_location.$q_config['flag'][$toplang].'" alt="'.$q_config['language_name'][$toplang].'" />
 	}
 	if(empty($item->attr_title))
 		$item->attr_title = $q_config['language_name'][$toplang];
