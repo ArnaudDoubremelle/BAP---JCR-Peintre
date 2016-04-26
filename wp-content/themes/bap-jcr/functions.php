@@ -35,6 +35,16 @@ function create_post_type() {
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
+    register_post_type('atelier',
+        array(
+            'labels' => array(
+                'name' => 'Atelier',
+                'singular_name' => 'Atelier'
+            ),
+            'public' => true,
+            'supports' => array('thumbnail', 'editor', 'title')
+        )
+    );
 }
 //Le jquery
 /*wp_enqueue_script("jquery");

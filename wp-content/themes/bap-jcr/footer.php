@@ -6,4 +6,5 @@
   <script src="<?php bloginfo( 'template_directory' ); ?>/js/bootstrap.min.js"></script>
   <script src="<?php bloginfo( 'template_directory' ); ?>/js/jquery.flexisel.js"></script>
   <script src="<?php bloginfo( 'template_directory' ); ?>/js/main.js"></script>
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/cadre.js"></script>
 </html>

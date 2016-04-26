@@ -1,20 +1,30 @@
 <?php get_header(); ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php $id = get_the_ID(); ?>
-  <div class="container single-container">
-    <div class="single-post">
-      <div class="single-img">
-        <?php the_post_thumbnail(); ?>
-      </div>
-      <div class="single-content">
-        <h3><?php the_title(); ?></h3><br>
-        <?php the_terms( $post->ID, 'categorie', 'Série : ' ); ?><br></p>
-        <?php the_content(); ?>
-      </div>
+  <div class="container">
+    <div class="row">
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+          <div class="col-md-12 vcenter ">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('',array('class'=>'img-responsive single-img center-block ')); ?>
+            <?php endif ?>
+            <div class="clearfix"></div>
+            <div class="col-md-offset-3 col-md-1 col-sm-1 col-xs-2  ">
+              <p class=" cadre text-center"><?php the_title(); ?></p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class=" col-md-offset-4 col-sm-offset-1 col-md-4 col-sm-10 col-xs-12 cadrecaption invisible animated">
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
+                <span class="cadreclose">x</span>
+              </div>
+            </div>
+            </div>
+
+
+      <?php endwhile; endif; ?>
     </div>
   </div>
-<?php endwhile; endif; ?>
 
 <?php //if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!--  --><?php //$id = get_the_ID(); ?>
