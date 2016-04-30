@@ -291,7 +291,7 @@ var qTranslateX=function(pg)
 			case 'TEXTAREA': break;
 			case 'INPUT':
 				//co('addContentHook: inpField.type=',inpField.type);
-				if(inpField.type != 'text') return false;
+				if(inpField.type.match(/(button|checkbox|password|radio|submit)/)) return false;
 				break;
 			default: return false;
 		}
@@ -307,8 +307,16 @@ var qTranslateX=function(pg)
 				//otherwise some Java script already removed previously hooked element
 				qtx.removeContentHook(inpField);
 			}
-		}else{
-			jQuery(inpField).uniqueId();
+		} else if (!contentHooks[field_name]) {
+			inpField.id = field_name;
+		} else {
+			var idx = 0;
+			do {
+				++idx;
+				inpField.id = field_name + idx;
+			} while (contentHooks[field_name]);
+			//jQuery(inpField).uniqueId();//does not work
+			//jQuery(inpField).each(function (i,e) { e.uniqueId(); });//does not work
 		}
 		//co('addContentHook: id=',inpField.id);
 		var h = contentHooks[inpField.id]={};

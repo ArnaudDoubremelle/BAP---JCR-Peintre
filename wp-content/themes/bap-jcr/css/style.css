@@ -10,7 +10,7 @@ body {
 }
 
 body.other-back  {
-  background-size: cover;
+  background-size: 100% 200%;
   background-attachment: fixed;
 }
 h1 {
@@ -137,14 +137,39 @@ a:hover, a:focus {
 .single-img  {
   box-shadow: 1px 5px 12px #313131;
 }
-
+.info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+.info-text {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.info-text h2 {
+    font-size:2em;
+    text-align: center;
+}
+.info-text ul {
+    padding-left: 10px;
+    text-align: left;
+}
 .cadre{
+  display: inline-block;
+  float: left;
   margin-top: 2em;
-  width: 80px;
-  font-size: 0.8em;
+  font-size: 0.9em;
   background: #fff;
   color: #444;
-  padding: 0.5em;
+  padding: 10px 25px;
   position: relative;
   text-align: left;
   cursor: -webkit-zoom-in;
@@ -158,7 +183,11 @@ a:hover, a:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
+  text-align: center;
+}
+.tableau {
+    position: relative;
+    display: inline-block;
 }
 .cadreclose{
   position: absolute;
@@ -204,6 +233,9 @@ a:hover, a:focus {
   padding: 0 0 10px 0;
   margin: 0 0 20px 0;
   font-size: 1.5em;
+}
+.cadrecaption ul {
+    text-align: left;
 }
 
 /*.single-content {
@@ -289,6 +321,7 @@ a:hover, a:focus {
 .backgroundbiographie{
   margin-top: 70px;
   margin-bottom: 70px;
+  padding: 40px 0px;
   background-color: #fff;
   box-shadow: 1px 5px 12px #313131;
 }
