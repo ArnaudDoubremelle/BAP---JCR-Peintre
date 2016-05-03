@@ -23,6 +23,8 @@
                 class="other-back"
             <?php elseif ( is_page('carnets') ) : ?>
                 class="carnet"
+            <?php elseif ( is_page('home') ) : ?>
+                class="home"
             <?php endif ; ?>>
 <!-- Header -->
 <?php if (!is_page('home') ):?>

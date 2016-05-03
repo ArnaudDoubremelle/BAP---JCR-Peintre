@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $('#animation').fadeIn(900);
+
     $(window).load(function() {
         $("#posts-slider").flexisel({
             visibleItems: 3
