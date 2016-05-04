@@ -11,10 +11,6 @@ $(document).ready(function() {
   $(".language").hide();
   $(".language").delay("12000").fadeIn("slow");
 
-
-  $(".tableau").on("mouseenter", function () { $(".info").animate({opacity:1}, {duration:200, easing:"linear"});	});
-  $(".tableau").on("mouseleave", function () { $(".info").animate({opacity:0}, {duration:200, easing:"linear"});	});
-
   var trigger = $('.link-menu'),
       faIcon = $('.icon-menu'),
       overlay = $('.overlay'),
