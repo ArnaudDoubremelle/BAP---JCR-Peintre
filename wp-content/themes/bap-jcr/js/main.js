@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $('#animation').fadeIn(900);
+
     $(window).load(function() {
         $("#posts-slider").flexisel({
             visibleItems: 3
@@ -8,11 +10,6 @@ $(document).ready(function() {
 
   $(".language").hide();
   $(".language").delay("12000").fadeIn("slow");
-
-  $('#media').carousel({
-    pause: true,
-    interval: false,
-  });
 
   var trigger = $('.link-menu'),
       faIcon = $('.icon-menu'),

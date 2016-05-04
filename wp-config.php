@@ -1,7 +1,7 @@
 <?php
 /**
  * La configuration de base de votre installation WordPress.
- *
+ * 
  * Ce fichier contient les réglages de configuration suivants : réglages MySQL,
  * préfixe de table, clefs secrètes, langue utilisée, et ABSPATH.
  * Vous pouvez en savoir plus à leur sujet en allant sur
