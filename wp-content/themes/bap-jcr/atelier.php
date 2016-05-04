@@ -10,18 +10,49 @@
 ?>
 <?php get_header()?>
 <body>
-
+<?php
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+$args1 = array(
+    'post_type' => 'atelier',
+    'order'     => 'DESC',
+    'pagination'=> true,
+    'posts_per_page' => '4',
+    'paged'     => $paged
+);
+?>
 <div class="container">
+
     <div class="row">
-        <div class="col-md-4">
+        <?php $wp_query = new WP_Query($args1); ?>
+        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+        <a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
+            <div class="col-md-6 col-sm-6 col-xs-12 mg-top">
+                <div class="grid">
+                    <figure class="effect-bubba">
+                        <div id="<?php the_field(url_video)?>" class="vimeo "></div>
+                        <figcaption>
+                            <h2><?php the_title(); ?></h2>
+                            <p><?php the_content(); ?></p>
+                            <p><i class="fa fa-play fa-5x" aria-hidden="true"></i></p>
+                        </figcaption>
+                    </figure>
+                </div>
 
-            <iframe src="https://player.vimeo.com/video/153001094" width="640" height="311" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            <p><a href="https://vimeo.com/153001094">video_accueil_3</a> from <a href="https://vimeo.com/user28511438">Jean-Christophe Renaux</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-        </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-4"></div>
+            </div>
+        </a>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
     </div>
+    <nav>
+        <?php next_posts_link( 'Next Page' ); ?>
+        <?php previous_posts_link( 'Previous page' ); ?>
+    </nav>
+    <?php
+    // clean up after our query
+    wp_reset_postdata();
+    ?>
 </div>
+
+
 
 <?php get_footer()?>

@@ -41,8 +41,14 @@ function create_post_type() {
                 'name' => 'Atelier',
                 'singular_name' => 'Atelier'
             ),
+            'query_var' => true,
+            'has_archive' => true,
             'public' => true,
-            'supports' => array('thumbnail', 'editor', 'title')
+            'supports' => array('thumbnail', 'editor', 'title'),
+            'rewrite' => array(
+        'slug' => 'videography',
+        'with_front'=>false //if not used then permalink of this post type will not work
+    ),
         )
     );
 }
@@ -81,3 +87,19 @@ register_taxonomy(
         'hierarchical' => true   ) );
 
 register_taxonomy_for_object_type( 'categories', 'peintures' );
+
+
+
+
+
+//Define the loop based on arguments
+
+//$query = new WP_Query( $args );
+
+//Display the content
+/*while ( $query->have_posts() ) : $query->the_post(); }
+
+    <!--loop-->
+
+<?php endwhile;?>*/
+

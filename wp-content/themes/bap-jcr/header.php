@@ -13,6 +13,7 @@
     <link href="<?php bloginfo( 'template_directory' ); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/animate.css"/>
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/lity.css"/>
 
 
 
