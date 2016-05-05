@@ -22,8 +22,6 @@
 
 <body <?php if (is_single() || is_page('contact') || is_page('biographie') ) : ?>
                 class="other-back"
-            <?php elseif ( is_page('carnets') ) : ?>
-                class="carnet"
             <?php elseif ( is_page('home') ) : ?>
                 class="home"
             <?php endif ; ?>>
@@ -47,4 +45,5 @@
         </div>
         <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
     </div>
+    <div class="title"><?php echo get_the_title() ?></div>
 <?php endif; ?>
