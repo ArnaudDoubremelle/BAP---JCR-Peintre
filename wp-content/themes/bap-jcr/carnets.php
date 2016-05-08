@@ -17,6 +17,10 @@
         <?php endwhile;
         wp_reset_postdata(); ?>
     </ul>
+    <div class="clearfix"></div>
+    <div class="row">
+        <?php get_template_part('template-contact');?>
+    </div>
 </div>
 
 <?php get_footer(); ?>

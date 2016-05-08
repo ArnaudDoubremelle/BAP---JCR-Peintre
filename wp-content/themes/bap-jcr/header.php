@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/bootstrap.min.css"/>
     <link href="<?php bloginfo( 'template_directory' ); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/media.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/animate.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/lity.css"/>
 
@@ -38,7 +39,9 @@
                 <?php endif; ?>
             </ul>
             <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
-
+            <ul class="nav sidebar-nav">
+                <li class="contact"><a href="#inline" data-lity>Contact</a></li>
+            </ul>
         </nav>
         <div id="page-content-wrapper">
             <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu">MENU</span><i class="icon-menu fa fa-bars"></i></button>

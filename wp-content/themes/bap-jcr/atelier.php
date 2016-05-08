@@ -43,14 +43,15 @@ $args1 = array(
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
     </div>
-    <nav>
-        <?php next_posts_link( 'Next Page' ); ?>
-        <?php previous_posts_link( 'Previous page' ); ?>
-    </nav>
+
     <?php
     // clean up after our query
     wp_reset_postdata();
     ?>
+    <div class="clearfix"></div>
+    <div class="row">
+        <?php get_template_part('template-contact');?>
+    </div>
 </div>
 
 

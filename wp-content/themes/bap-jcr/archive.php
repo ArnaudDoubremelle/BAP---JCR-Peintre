@@ -20,6 +20,9 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         <?php endwhile;
         wp_reset_postdata(); ?>
     </ul>
+    <div class="row">
+        <?php get_template_part('template-contact');?>
+    </div>
 </div>
 
 <?php get_footer(); ?>

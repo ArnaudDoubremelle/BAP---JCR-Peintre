@@ -2,6 +2,9 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-md-2">
+           <!-- <a href="peintures"><i class="fa fa-long-arrow-left fa-lg" aria-hidden="true"></i> Retour Galerie</a>-->
+        </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <div class="col-md-4 vcenter ">
                 <?php if (has_post_thumbnail()) : ?>
@@ -11,7 +14,7 @@
                     <p class=" cadre text-center"><?php the_title(); ?></p>
                 <div class="clearfix"></div>
                 <div class="row">
-                    <div class="col-md-12 cadrecaption invisible animated">
+                    <div class="col-md-12 col-xs-12 cadrecaption invisible animated">
                         <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
                         <span class="cadreclose">x</span>
@@ -20,6 +23,10 @@
             </div>
         <?php endwhile; endif; ?>
         </div>
+    <div class="clearfix"></div>
+    <div class="row">
+        <?php get_template_part('template-contact');?>
+    </div>
     </div>
 
         <!--<div class="container">-->

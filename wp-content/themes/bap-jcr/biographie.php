@@ -20,8 +20,10 @@ Template Name: biographie
               <?php endwhile; endif; ?>
           </div>
       </div>
-
     </div>
-
+    <div class="clearfix"></div>
+    <div class="row">
+        <?php get_template_part('template-contact');?>
+    </div>
 </div>
 <?php get_footer()?>

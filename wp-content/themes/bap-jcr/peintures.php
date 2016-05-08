@@ -18,5 +18,8 @@
         wp_reset_postdata(); ?>
     </ul>
 </div>
-
+<div class="clearfix"></div>
+<div class="row">
+    <?php get_template_part('template-contact');?>
+</div>
 <?php get_footer(); ?>

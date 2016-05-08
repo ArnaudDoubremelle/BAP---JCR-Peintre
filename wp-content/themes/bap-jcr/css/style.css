@@ -1,7 +1,6 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
 body {
   background: url("../img/back_gallery.png") no-repeat left top;
@@ -257,9 +256,12 @@ a:hover, a:focus {
 .invisible{
   visibility: hidden;
 }
+
 .cadrecaption{
 
+  position: fixed;
 
+  top:100%;
   /* height: 350px;
    top: 0px;*/
   padding: 2.5em;
@@ -570,34 +572,30 @@ a:hover, a:focus {
   margin-right: 10px;
 }
 
-
-@media screen and (max-width: 767px) {
-  .txt-menu {
-    margin: 0;
-    display: none;
-  }
-}
 .icon-menu {
   position: relative;
   z-index: 999;
 }
-.menu-principal-container ul {
+.navbar ul {
   margin: 0;
   padding: 0;
 }
-.menu-principal-container ul li {
+.navbar ul li {
   display: inline-block;
   line-height: 20px;
   position: relative;
   width: 100%;
+  border-top: 1px solid  #333333;
 }
-.menu-principal-container ul li:hover {
+.navbar ul li a:hover {
   background-color: #333333;
+
 }
-.menu-principal-container ul li a {
+
+.navbar ul li a {
   color: #dddddd;
   display: block;
-  padding: 15px 15px 15px 30px;
+  padding: 30px 15px 30px 30px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -610,6 +608,8 @@ a:hover, a:focus {
 .sub-menu li:hover {
   background-color: #4C4C4C !important;
 }
+
+/***********************CONTACT*************************/
 
 
 
@@ -712,22 +712,8 @@ a:hover, a:focus {
   right: 45%;
 }
 
-@media screen and (max-width: 767px) {
-  .nbs-flexisel-nav-right {
-    right: 35%;
-  }
-  .nbs-flexisel-nav-left {
-      left: 35%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .nbs-flexisel-nav-right {
-    right: 40%;
-  }
-  .nbs-flexisel-nav-left {
-      left: 40%;
-  }
-
+.mg-top{
+  margin-top: 2em;
 }
 /**********************HOVER VIDEO*/
 .grid {
@@ -884,15 +870,9 @@ figure.effect-bubba:hover p {
   transform: translate3d(0,0,0);
 }
 
-@media screen and (max-width: 50em) {
-  .content {
-    padding: 0 10px;
-    text-align: center;
-  }
-  .grid figure {
-    display: inline-block;
-    float: none;
-  ;
-    width: 100%;
-  }
+
+#inline{
+  width: 550px;
+  padding: 30px 30px 30px 30px;
+  border-radius: 2px;
 }
