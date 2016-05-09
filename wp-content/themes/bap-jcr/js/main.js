@@ -38,4 +38,24 @@ $(document).ready(function() {
   $('[data-toggle="offcanvas"]').click(function () {
     $('#wrapper').toggleClass('toggled');
   });
+
+// -------------------- Lightbox single
+
+  $('.slider .image a').click(function() {
+    var itemID = $(this).attr('href');
+    $('.slider .image').addClass('item_open');
+    $(itemID).addClass('item_open');
+    return false;
+  });
+  $('.close').click(function() {
+    $('.port, .slider .image').removeClass('item_open');
+    return false;
+  });
+
+  // $(".slider .image a").click(function() {
+  //   $('html, body').animate({
+  //     scrollTop: parseInt($("#top").offset().top)
+  //   }, 400);
+  // });
+
 });
