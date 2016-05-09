@@ -29,6 +29,22 @@ body.other-back  {
   height: auto;
   box-shadow: 1px 5px 12px #313131;
 }
+.slick-arrow {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  text-indent: -9999px;
+  border:none;
+  width: 48px;
+}
+.slick-prev {
+  left: 45%;
+  background: url(../img/button-previous.png) no-repeat;
+}.slick-next {
+  right: 45%;
+   background: url(../img/button-next.png) no-repeat;
+}
+
 #animation {
   display: none;
   position: absolute;
