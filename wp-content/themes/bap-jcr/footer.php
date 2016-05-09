@@ -7,6 +7,39 @@
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/cadre.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/lity.js"></script>
 <script src="<?php bloginfo( 'template_directory' ); ?>/js/vimeo.js"></script>
+
+<script src="<?php bloginfo( 'template_directory' ); ?>/js/slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.slider').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+  });
+  });
+</script>
+
   <?php wp_footer(); ?>
 
 
