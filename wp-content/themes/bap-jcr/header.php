@@ -4,7 +4,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
     <title><?php bloginfo('name'); ?> - <?php the_title();?></title>
 
@@ -44,9 +43,9 @@
             </ul>
         </nav>
         <div id="page-content-wrapper">
-            <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu">MENU</span><i class="icon-menu fa fa-bars"></i></button>
+            <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
         </div>
         <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
     </div>
-    <div class="title"><?php echo get_the_title() ?></div>
+<!--    <div class="title"></div>-->
 <?php endif; ?>
