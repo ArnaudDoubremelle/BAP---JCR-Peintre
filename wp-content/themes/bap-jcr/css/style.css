@@ -106,7 +106,7 @@ h1 {
   width: 141px;
   background-color: #333;
   border-right: none;
-  padding: 15px;
+  padding: 8px 0 8px 15px;
   color: #CECED0;
 }
 a {
