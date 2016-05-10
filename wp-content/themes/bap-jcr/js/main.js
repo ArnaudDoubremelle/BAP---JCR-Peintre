@@ -120,7 +120,6 @@ $(document).ready(function(){
     {
       $(this).next().slideDown();
     }
-    $(".active .fa-chevron-down").toggleClass('animation');
   })
 })
 });

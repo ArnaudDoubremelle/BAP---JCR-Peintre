@@ -532,18 +532,7 @@ a:hover, a:focus {
 .menu-principal-container ul ul {
   display: none;
 }
-.animation{
-  -moz-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -ms-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
+
 .menu-principal-container li.active ul {
   display: block;
 }
@@ -728,13 +717,20 @@ a:hover, a:focus {
   text-transform: uppercase;
   font-weight: bold;
 }
-.sub-menu li a {
-  margin-left: 20px;
+.menu-principal-container ul ul li a{
+  padding: 30px 0px 30px 50px;
   text-transform: none !important;
   font-weight: normal !important;
+  margin: 0px;
 }
-.sub-menu li:hover {
-  background-color: #4C4C4C !important;
+.menu-principal-container ul ul li a:hover {
+  background: #333333;
+  border-left: 8px solid #9d9d9d;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 /***********************CONTACT*************************/

@@ -31,7 +31,7 @@ add_action( 'walker_nav_menu_start_el', 'empty_nav_links_to_span', 10, 4 );
 function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {
     $menu_items = array(48,51);
     if (in_array($item->ID, $menu_items)) {
-        $item_output = preg_replace( '/<a.*?>(.*)<\/a>/', '<span class="notactive">$1 <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></span>', $item_output );
+        $item_output = preg_replace( '/<a.*?>(.*)<\/a>/', '<span>$1 <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></span>', $item_output );
     }
     return $item_output;
 }

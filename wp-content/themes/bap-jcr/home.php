@@ -24,6 +24,6 @@
     <div class="bg-layer"></div>
 </div> <!-- .cd-transition-layer -->
 
-<script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/video.js"></script>
+
 
 <?php get_footer()?>
