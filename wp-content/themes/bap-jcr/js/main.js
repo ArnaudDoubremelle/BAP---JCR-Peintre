@@ -43,12 +43,11 @@ $(document).ready(function() {
 
   $('.slider .image a').click(function() {
     var itemID = $(this).attr('href');
-    $('.slider .image').addClass('item_open');
     $(itemID).addClass('item_open');
     return false;
   });
   $('.close').click(function() {
-    $('.port, .slider .image').removeClass('item_open');
+    $('.port').removeClass('item_open');
     return false;
   });
 
