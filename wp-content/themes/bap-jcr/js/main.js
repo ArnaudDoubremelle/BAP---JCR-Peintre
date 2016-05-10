@@ -66,14 +66,14 @@ $(document).ready(function() {
   });
 
   //open modal window
-  $('#logo').load(function(event){
+  window.onload = function(event){
     event.preventDefault();
     transitionLayer.addClass('visible opening');
     var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
     setTimeout(function(){
       modalWindow.addClass('visible');
     }, delay);
-  });
+  };
 
   //close modal window
   // modalWindow.on('click', '.modal-close', function(event){
