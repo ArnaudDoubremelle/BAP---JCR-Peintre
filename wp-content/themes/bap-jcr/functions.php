@@ -2,15 +2,39 @@
 // Cacher la barre admin
 show_admin_bar(false);
 
-//Ajout Side Menu
-register_nav_menu('side', 'Menu side');
-
 // Ajouter les images à la une sur les articles
 add_theme_support( 'post-thumbnails' );
 
 // Ajouter un menu
 register_nav_menu('principal', 'Menu principal');
 
+add_action( 'nav_menu_css_class', 'menu_item_classes', 10, 3 );
+function menu_item_classes( $classes, $item, $args ) {
+    // Gardons seulement les classes qui nous intéressent
+    $classes = array_intersect( $classes, array(
+        'menu-item',
+        'current-menu-item',
+        'current-menu-parent',
+        'menu-item-has-children'
+    ) );
+    // Ajoutons la classe pour désigner les éléments vides
+    if ( '#' == $item->url ) {
+        $classes[] = 'empty-item';
+    }
+
+    return $classes;
+}
+/**
+ * Changer les liens vides en span
+ */
+add_action( 'walker_nav_menu_start_el', 'empty_nav_links_to_span', 10, 4 );
+function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {
+    $menu_items = array(48,51);
+    if (in_array($item->ID, $menu_items)) {
+        $item_output = preg_replace( '/<a.*?>(.*)<\/a>/', '<span class="notactive">$1 <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i></span>', $item_output );
+    }
+    return $item_output;
+}
 // Créer des Custom Post Type
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
@@ -46,9 +70,9 @@ function create_post_type() {
             'public' => true,
             'supports' => array('thumbnail', 'editor', 'title'),
             'rewrite' => array(
-        'slug' => 'videography',
-        'with_front'=>false //if not used then permalink of this post type will not work
-    ),
+                'slug' => 'videography',
+                'with_front'=>false //if not used then permalink of this post type will not work
+            ),
         )
     );
 }
@@ -88,18 +112,4 @@ register_taxonomy(
 
 register_taxonomy_for_object_type( 'categories', 'peintures' );
 
-
-
-
-
-//Define the loop based on arguments
-
-//$query = new WP_Query( $args );
-
-//Display the content
-/*while ( $query->have_posts() ) : $query->the_post(); }
-
-    <!--loop-->
-
-<?php endwhile;?>*/
 

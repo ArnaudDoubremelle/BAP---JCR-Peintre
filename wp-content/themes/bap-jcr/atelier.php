@@ -48,10 +48,6 @@ $args1 = array(
     // clean up after our query
     wp_reset_postdata();
     ?>
-    <div class="clearfix"></div>
-    <div class="row">
-        <?php get_template_part('template-contact');?>
-    </div>
 </div>
 
 

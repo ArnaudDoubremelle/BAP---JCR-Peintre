@@ -108,3 +108,19 @@ $(document).ready(function() {
   }
 
 });
+//////////
+jQuery(document).ready(function( $ ) {
+$(document).ready(function(){
+  $(".menu-principal-container span").click(function(){
+    $(this).toggleClass('active');
+    //slide up all the link lists
+    $(".menu-principal-container ul ul").slideUp();
+    //slide down the link list below the h3 clicked - only if its closed
+    if(!$(this).next().is(":visible"))
+    {
+      $(this).next().slideDown();
+    }
+    $(".active .fa-chevron-down").toggleClass('animation');
+  })
+})
+});

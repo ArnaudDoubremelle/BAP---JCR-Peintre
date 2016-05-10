@@ -33,7 +33,7 @@ body.other-back  {
 .slick-arrow {
   position: absolute;
   z-index: 5;
-  bottom: 0;
+  bottom: 5%;
   text-indent: -9999px;
   border:none;
   width: 48px;
@@ -323,9 +323,10 @@ a:hover, a:focus {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 
 }
 .cadreclose{
@@ -476,6 +477,20 @@ a:hover, a:focus {
   position: inherit;
   color: white;
 }
+/**************************MENU********************************/
+.navbar ul li span{
+  cursor: pointer;
+  color: #dddddd;
+  display: block;
+  padding: 20px 15px 20px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar ul li span:hover {
+  background-color: #333333;
+
+}
 .nav-menu {
 
   right: -400px;  /* start off behind the scenes */
@@ -514,8 +529,23 @@ a:hover, a:focus {
   border-top: 3px solid #222;
   padding-top: 17px;
 }
-.sub-menu {
-
+.menu-principal-container ul ul {
+  display: none;
+}
+.animation{
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.menu-principal-container li.active ul {
+  display: block;
 }
 /**/
 .icon-close {

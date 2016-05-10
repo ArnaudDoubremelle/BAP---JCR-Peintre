@@ -6,8 +6,8 @@
 <?php get_header(); ?>
 
 
-<div id="top"></div>
-<div class="slider">
+
+<div class="slider vcenter">
     <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
     <?php while ($my_query->have_posts()) :
     $my_query->the_post(); ?>
