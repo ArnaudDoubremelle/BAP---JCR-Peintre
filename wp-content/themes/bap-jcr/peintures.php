@@ -8,7 +8,7 @@
 
 <div id="top"></div>
 <div class="slider">
-    <?php $my_query = new WP_Query(array('post_type' => 'peintures')); ?>
+    <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
     <?php while ($my_query->have_posts()) :
     $my_query->the_post(); ?>
         <div><div class="image"><a href="#<?php echo $post->post_name ?>"><?php the_post_thumbnail(); ?></a></div></div>
