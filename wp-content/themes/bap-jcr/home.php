@@ -15,11 +15,14 @@
 
 <a href="peintures">
     <div id="animation">
-        <img id="toile" src="<?php bloginfo('template_directory') ?>/img/toile.jpg" alt="toile" />
         <img id="logo" src="<?php bloginfo('template_directory') ?>/img/logo.png" alt="logo-jcr" />
         <button class="btn btn-intro">Entrer</button>
     </div>
 </a>
+
+<div class="cd-transition-layer">
+    <div class="bg-layer"></div>
+</div> <!-- .cd-transition-layer -->
 
 <script type="text/javascript" src="<?php bloginfo('template_directory')?>/js/video.js"></script>
 

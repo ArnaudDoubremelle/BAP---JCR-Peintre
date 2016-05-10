@@ -1,15 +1,8 @@
 $(document).ready(function() {
 
-  $('#animation').fadeIn(900);
+  $('#animation').delay(1200).fadeIn(900);
 
-    $(window).load(function() {
-        $("#posts-slider").flexisel({
-            visibleItems: 3
-        });
-    });
-
-  $(".language").hide();
-  $(".language").delay("12000").fadeIn("slow");
+  // ---------------- MENU
 
   var trigger = $('.link-menu'),
       faIcon = $('.icon-menu'),
@@ -51,10 +44,67 @@ $(document).ready(function() {
     return false;
   });
 
-  // $(".slider .image a").click(function() {
-  //   $('html, body').animate({
-  //     scrollTop: parseInt($("#top").offset().top)
-  //   }, 400);
+  // -------------------- Ink transition
+
+  //cache some jQuery objects
+  var modalTrigger = $('.cd-modal-trigger'),
+      transitionLayer = $('.cd-transition-layer'),
+      transitionBackground = transitionLayer.children(),
+      modalWindow = $('.cd-modal');
+
+  var frameProportion = 1.78, //png frame aspect ratio
+      frames = 25, //number of png frames
+      resize = false;
+
+  //set transitionBackground dimentions
+  setLayerDimensions();
+  $(window).on('resize', function(){
+    if( !resize ) {
+      resize = true;
+      (!window.requestAnimationFrame) ? setTimeout(setLayerDimensions, 300) : window.requestAnimationFrame(setLayerDimensions);
+    }
+  });
+
+  //open modal window
+  $('#logo').load(function(event){
+    event.preventDefault();
+    transitionLayer.addClass('visible opening');
+    var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
+    setTimeout(function(){
+      modalWindow.addClass('visible');
+    }, delay);
+  });
+
+  //close modal window
+  // modalWindow.on('click', '.modal-close', function(event){
+  //   event.preventDefault();
+  //   transitionLayer.addClass('closing');
+  //   modalWindow.removeClass('visible');
+  //   transitionBackground.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+  //     transitionLayer.removeClass('closing opening visible');
+  //     transitionBackground.off('webkitAnimationEnd oanimationend msAnimationEnd animationend');
+  //   });
   // });
+
+  function setLayerDimensions() {
+    var windowWidth = $(window).width(),
+        windowHeight = $(window).height(),
+        layerHeight, layerWidth;
+
+    if( windowWidth/windowHeight > frameProportion ) {
+      layerWidth = windowWidth;
+      layerHeight = layerWidth/frameProportion;
+    } else {
+      layerHeight = windowHeight*1.2;
+      layerWidth = layerHeight*frameProportion;
+    }
+
+    transitionBackground.css({
+      'width': layerWidth*frames+'px',
+      'height': layerHeight+'px',
+    });
+
+    resize = false;
+  }
 
 });
