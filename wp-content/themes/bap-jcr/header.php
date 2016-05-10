@@ -48,4 +48,5 @@
         <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
     </div>
 <!--    <div class="title"></div>-->
+
 <?php endif; ?>

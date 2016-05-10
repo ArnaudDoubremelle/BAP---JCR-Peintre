@@ -120,6 +120,7 @@ $(document).ready(function(){
     {
       $(this).next().slideDown();
     }
+
   })
 })
 });
