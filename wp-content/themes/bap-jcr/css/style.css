@@ -3,7 +3,7 @@ html, body {
   height: 100%;
 }
 body {
-  background: url("../img/back_gallery.png") no-repeat left top;
+  background: url("../img/back_gallery.png") no-repeat left top fixed;
   background-size: 100% 100%;
   overflow-x: hidden;
 }
