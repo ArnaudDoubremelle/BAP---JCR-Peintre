@@ -20,7 +20,7 @@ $args1 = array(
     'paged'     => $paged
 );
 ?>
-<div class="container">
+<div class="container mg-top">
 
     <div class="row">
         <?php $wp_query = new WP_Query($args1); ?>
@@ -28,12 +28,14 @@ $args1 = array(
         <a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
             <div class="col-md-6 col-sm-6 col-xs-12 mg-top">
                 <div class="grid">
-                    <figure class="effect-bubba">
+                    <figure class="effect-oscar">
                         <div id="<?php the_field(url_video)?>" class="vimeo "></div>
                         <figcaption>
                             <h2><?php the_title(); ?></h2>
-                            <p><?php the_content(); ?></p>
-                            <p><i class="fa fa-play fa-5x" aria-hidden="true"></i></p>
+                            <div>
+                                <?php the_content() ?>
+                            </div>
+
                         </figcaption>
                     </figure>
                 </div>

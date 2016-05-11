@@ -45,7 +45,6 @@
     .cadrecaption{
         width:100%;
     }
-
 }
 
 /* Medium devices (tablets, less than 62em)*/
@@ -53,6 +52,20 @@
     .cadrecaption{
         top:85%;
         width:100%;
+    }
+    .grid figure p {
+        letter-spacing: 1px;
+        font-size: 0.4em;
+        line-height: 1em;
+    }
+    .grid figure figcaption {
+        padding: 1.5em;
+    }
+    figure.effect-oscar figcaption {
+        padding:1em;
+        background-color: rgba(58,52,42,0.7);
+        -webkit-transition: background-color 0.35s;
+        transition: background-color 0.35s;
     }
 }
 
