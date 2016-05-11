@@ -26,6 +26,7 @@ $my_query->the_post(); ?>
             <div class="col-md-offset-2 col-md-5">
                 <?php the_post_thumbnail('', array( 'class'	=> "single-img")); ?>
             </div>
+            <div class="clearfix"></div>
             <div class="col-md-4">
                 <h3><?php the_title() ?></h3>
                 <?php the_content(); ?>
