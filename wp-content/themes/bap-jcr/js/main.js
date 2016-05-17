@@ -73,7 +73,7 @@ $(document).ready(function() {
     setTimeout(function(){
       modalWindow.addClass('visible');
     }, delay);
-    $('#animation').delay(1200).fadeIn(900);
+
   };
 
   //close modal window

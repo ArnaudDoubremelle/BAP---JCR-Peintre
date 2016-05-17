@@ -35,6 +35,14 @@ function empty_nav_links_to_span( $item_output, $item, $depth, $args ) {
     }
     return $item_output;
 }
+add_action( 'walker_nav_menu_start_el', 'contact_va_link', 10, 4 );
+function contact_va_link( $item_output, $item, $depth, $args ) {
+    $menu_items = array(149);
+    if (in_array($item->ID, $menu_items)) {
+        $item_output = preg_replace( '/<a.*?>(.*)<\/a>/', '<a href="#inline" data-lity>$1</a>', $item_output );
+    }
+    return $item_output;
+}
 // Créer des Custom Post Type
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
@@ -59,46 +67,45 @@ function create_post_type() {
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
-    register_post_type('atelier',
+    register_post_type('repérage',
         array(
             'labels' => array(
-                'name' => 'Atelier',
-                'singular_name' => 'Atelier'
+                'name' => 'Repérage',
+                'singular_name' => 'Repérage'
             ),
-            'query_var' => true,
-            'has_archive' => true,
             'public' => true,
             'supports' => array('thumbnail', 'editor', 'title'),
-            'rewrite' => array(
-                'slug' => 'videography',
-                'with_front'=>false //if not used then permalink of this post type will not work
-            ),
         )
     );
 }
-//Le jquery
-/*wp_enqueue_script("jquery");
-/*Script JS pour la vidéo d'accueil*/
-/*function video_js(){
-
-    wp_register_script( 'video',
-        get_template_directory_uri() . '/js/aaaaa.js',
-        array() );
-    if (is_home()) {
-        wp_enqueue_script('video');
-    }
-}
-add_action( 'wp_footer', 'video_js' );
-
 /*Custom categorie*/
 register_taxonomy(
-    'categories',
+    'series',
     'peintures',
     array(
+        'label' => 'Series',
+        'labels' => array(
+            'name' => 'Series',
+            'singular_name' => 'Serie',
+            'all_items' => 'Toutes les series',
+            'edit_item' => 'Éditer la series',
+            'view_item' => 'Voir la series',
+            'update_item' => 'Mettre à jour la series',
+            'add_new_item' => 'Ajouter une serie',
+            'new_item_name' => 'Nouvelle series',
+            'search_items' => 'Rechercher parmi les series',
+            'popular_items' => 'Series les plus utilisées'
+        ),
+        'hierarchical' => true   ) );
+
+register_taxonomy_for_object_type( 'series', 'peintures' );
+
+function ct_catégorie() {
+    $labels = array(
         'label' => 'Catégories',
         'labels' => array(
             'name' => 'Catégories',
-            'singular_name' => 'Categorie',
+            'singular_name' => 'Catégorie',
             'all_items' => 'Toutes les catégories',
             'edit_item' => 'Éditer la catégories',
             'view_item' => 'Voir la catégories',
@@ -106,10 +113,14 @@ register_taxonomy(
             'add_new_item' => 'Ajouter une catégories',
             'new_item_name' => 'Nouvelle catégories',
             'search_items' => 'Rechercher parmi les catégories',
-            'popular_items' => 'Catégories les plus utilisées'
-        ),
-        'hierarchical' => true   ) );
-
-register_taxonomy_for_object_type( 'categories', 'peintures' );
+            'popular_items' => 'Catégories les plus utilisées')
+    );
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+    );
+    register_taxonomy( 'catégorie', 'carnets', $args );
+}
+add_action( 'init', 'ct_catégorie', 0 );
 
 

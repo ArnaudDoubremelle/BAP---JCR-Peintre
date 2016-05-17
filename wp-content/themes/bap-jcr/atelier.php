@@ -11,47 +11,38 @@
 <?php get_header()?>
 <body>
 <?php
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $args1 = array(
-    'post_type' => 'atelier',
+    'post_type' => 'repérage',
     'order'     => 'DESC',
-    'pagination'=> true,
-    'posts_per_page' => '4',
-    'paged'     => $paged
+    'posts_per_page' => '-1',
 );
 ?>
-<div class="container mg-top">
-
-    <div class="row">
-        <?php $wp_query = new WP_Query($args1); ?>
-        <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-        <a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
-            <div class="col-md-6 col-sm-6 col-xs-12 mg-top">
-                <div class="grid">
-                    <figure class="effect-oscar">
-                        <div id="<?php the_field(url_video)?>" class="vimeo "></div>
-                        <figcaption>
-                            <h2><?php the_title(); ?></h2>
-                            <div>
-                                <?php the_content() ?>
-                            </div>
-
-                        </figcaption>
-                    </figure>
-                </div>
-
-            </div>
-        </a>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
-    </div>
-
-    <?php
-    // clean up after our query
-    wp_reset_postdata();
-    ?>
+<div class="slider vcenter">
+    <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
+    <?php while ($my_query->have_posts()) :
+        $my_query->the_post(); ?>
+        <div><div class="image"><a href="#<?php echo $post->post_name ?>"><?php the_post_thumbnail(); ?></a></div></div>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
 </div>
 
+<a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
+    <div class="col-md-6 col-sm-6  col-xs-12 mg-top">
+        <div class="grid">
+            <figure class="effect-oscar">
+                <div id="<?php the_field(url_video)?>" class="vimeo "></div>
+                <figcaption>
+                    <h2><?php the_title(); ?></h2>
+                    <div>
+                        <?php the_content() ?>
+                    </div>
+
+                </figcaption>
+            </figure>
+        </div>
+
+    </div>
+</a>
 
 
 <?php get_footer()?>

@@ -50,8 +50,8 @@
 /* Medium devices (tablets, less than 62em)*/
 @media (max-width: 62em) {
     .cadrecaption{
+
         top:85%;
-        width:100%;
     }
     .grid figure p {
         letter-spacing: 1px;

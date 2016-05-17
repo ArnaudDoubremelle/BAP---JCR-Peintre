@@ -38,9 +38,6 @@
                 <?php endif; ?>
             </ul>
             <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
-            <ul class="nav sidebar-nav">
-                <li class="contact"><a href="#inline" data-lity>Contact</a></li>
-            </ul>
         </nav>
         <div id="page-content-wrapper">
             <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>

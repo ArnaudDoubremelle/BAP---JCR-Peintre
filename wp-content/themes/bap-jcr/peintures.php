@@ -23,11 +23,11 @@ $my_query->the_post(); ?>
     <div class="container">
         <a href="#" class="close"></a>
         <div class="row">
-            <div class="col-md-offset-2 col-md-5">
+            <div class="col-md-offset-2 col-md-5 single-post">
                 <?php the_post_thumbnail('', array( 'class'	=> "single-img")); ?>
             </div>
             <div class="clearfix"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 single-post">
                 <h3><?php the_title() ?></h3>
                 <?php the_content(); ?>
             </div>

@@ -15,6 +15,23 @@ body.other-back  {
   background-size: cover;
   background-attachment: fixed;
 }
+/***************FONT*****************/
+
+@font-face{font-family:'sinanova-regularregular';
+  src:url(../fonts/SinaNovaReg-webfont.eot);
+  src:url(../fonts/SinaNovaReg-webfont.eot?#iefix) format('embedded-opentype'),
+  url(../fonts/SinaNovaReg-webfont.woff2) format('woff2'),
+  url(../fonts/SinaNovaReg-webfont.woff) format('woff'),
+url(../fonts/SinaNovaReg-webfont.ttf) format('truetype'),
+  url(../fonts/SinaNovaReg-webfont.svg#sinanova-regularregular) format('svg');
+  font-weight: bold;
+  font-style: normal}
+p { font-family: 'sinanova-regularregular', Arial, sans-serif;}
+span { font-family: 'sinanova-regularregular', Arial, sans-serif;
+font-size: 1.2em}
+h1 { font-family: 'sinanova-regularregular', Arial, sans-serif;
+}
+/***************/
 .slick-track {
   display: flex;
 }
@@ -81,9 +98,6 @@ body.other-back  {
   height: 100%;
   display: flex;
 }
-.port .col-md-5, .port .col-md-4 {
-  margin: auto;
-}
 .item_open .close {
   opacity: 1;
   top: 0px;
@@ -116,9 +130,43 @@ body.other-back  {
   width: 100%;
   height: auto;
 }
-
+/*************HOME***************/
 #animation {
-  display: none;
+  -webkit-animation: test 3.5s ease; /* Safari 3.5+ */
+  -moz-animation:    test 3.5s ease; /* Fx 5+ */
+  -o-animation:      test 3.5s ease; /* Opera 12+ */
+  animation:         test 3.5s ease; /* IE 10+, Fx 29+ */
+}
+@-webkit-keyframes test {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@-moz-keyframes test {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@-o-keyframes test {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@keyframes test {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+#animation {
+  display: block;
   z-index: 3;
   position: absolute;
   top: 50%;
@@ -129,28 +177,15 @@ body.other-back  {
   text-align: center;
   overflow: hidden;
   padding: 1px;
-  background-color: #fff;
+ opacity: 0.9;
 }
 #logo {
   position: relative;
   width: 100%;
   height: auto;
 }
-#toile {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 110%;
-  height: auto;
-  transform: translate(-50%, -50%);
-  /*animation: toile 1s linear infinite alternate;*/
-}
+
 .btn-intro {
-  position: absolute;
-  display: block;
-  bottom: 5%;
-  left: 50%;
-  margin-left: -53.5px;
   color: #fff;
   letter-spacing: 7px;
   text-align: center;
@@ -160,6 +195,15 @@ body.other-back  {
 .btn-intro:hover, .btn-intro:focus {
   color: #797979;
   outline: none !important;
+}
+#toile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  /*animation: toile 1s linear infinite alternate;*/
 }
 @keyframes toile {
   0% {
@@ -290,20 +334,13 @@ a:hover, a:focus {
 .single-container {
   height:80%;
 }
-/*.single-post {
-  position: absolute;
-  top: 10%;
-  height: 90%;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}*/
-/*.single-img {
-  display: inline-block;
-  height: 100%;
-}*/
+.single-post {
+  margin: auto;
+}
 .single-img  {
   box-shadow: 1px 5px 12px #313131;
+  display: inline-block;
+  height: 100%;
 }
 
 .cadre{
@@ -463,7 +500,7 @@ a:hover, a:focus {
   box-shadow: 1px 5px 12px #313131;
 }
 .biographie p{
-  font-size: 1em;
+  font-size: 1.2em;
 }
 /*MENU*/
 
@@ -1103,4 +1140,11 @@ figure.effect-oscar:hover img {
     -o-transform: translateY(-50%) translateX(-2%);
     transform: translateY(-50%) translateX(-2%);
   }
+}
+/*********************SEO*******************/
+#wpseo_content table tbody tr{
+  display: none !important;
+}
+#wpseo_content table tbody tr th td:last-child{
+  display: none;
 }
