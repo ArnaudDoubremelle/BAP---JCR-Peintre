@@ -10,7 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/bootstrap.min.css"/>
     <link href="<?php bloginfo( 'template_directory' ); ?>/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/media.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/animate.css"/>

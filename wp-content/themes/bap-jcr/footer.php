@@ -6,7 +6,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <!--<script src="--><?php //bloginfo( 'template_directory' ); ?><!--/js/jquery.flexisel.js"></script>-->
 <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 <!--<script src="--><?php //bloginfo( 'template_directory' ); ?><!--/js/cadre.js"></script>-->
@@ -19,6 +19,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
         $('.slider').slick({
+            variableWidth: false,
             centerMode: true,
             centerPadding: '60px',
             slidesToShow: 3,
