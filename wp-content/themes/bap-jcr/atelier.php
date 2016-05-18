@@ -9,28 +9,31 @@
 
 ?>
 <?php get_header()?>
-<body>
 <?php
-$args1 = array(
-    'post_type' => 'repérage',
-    'order'     => 'DESC',
-    'posts_per_page' => '-1',
-);
+
 ?>
 <div class="slider vcenter">
-    <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
-    <?php while ($my_query->have_posts()) :
-        $my_query->the_post(); ?>
-        <div><div class="image"><a href="#<?php echo $post->post_name ?>"><?php the_post_thumbnail(); ?></a></div></div>
-    <?php endwhile;
-    wp_reset_postdata(); ?>
+    <div><div class="image"><a href="//vimeo.com/1084537" data-lity>
+                <img src="https://i.vimeocdn.com/video/553159401_1200.jpg" alt=""></a>
+        </div>
+    </div>
+    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/2.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/2.jpg" alt=""></a>
+
+        </div></div>
+    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/4.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/4.jpg" alt=""></a>
+
+        </div></div>
+    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/5.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/5.jpg" alt=""></a>
+
+        </div></div>
 </div>
 
-<a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
+
+<!--<a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
     <div class="col-md-6 col-sm-6  col-xs-12 mg-top">
         <div class="grid">
             <figure class="effect-oscar">
-                <div id="<?php the_field(url_video)?>" class="vimeo "></div>
+
                 <figcaption>
                     <h2><?php the_title(); ?></h2>
                     <div>
@@ -42,7 +45,7 @@ $args1 = array(
         </div>
 
     </div>
-</a>
+</a>-->
 
 
 <?php get_footer()?>

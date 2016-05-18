@@ -20,10 +20,13 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php if (is_single() || is_page('contact') || is_page('biographie') ) : ?>
+
+<body <?php if (is_single() || is_page('biographie') ) : ?>
                 class="other-back"
             <?php elseif ( is_page('home') ) : ?>
                 class="home"
+            <?php elseif ( is_page('reperage') ) : ?>
+                class="atelier"
             <?php endif ; ?>>
 <!-- Header -->
 <?php if (!is_page('home') ):?>
@@ -42,7 +45,7 @@
         <div id="page-content-wrapper">
             <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
         </div>
-        <a href="<?php echo get_home_url() ; ?>"><h1>Jean-Christophe Renaux</h1></a>
+        <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="100px"></a>
     </div>
 <!--    <div class="title"></div>-->
 

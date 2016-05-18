@@ -100,27 +100,27 @@ register_taxonomy(
 
 register_taxonomy_for_object_type( 'series', 'peintures' );
 
-function ct_catégorie() {
+function ct_categorie() {
     $labels = array(
-        'label' => 'Catégories',
+        'label' => 'Categories',
         'labels' => array(
-            'name' => 'Catégories',
-            'singular_name' => 'Catégorie',
-            'all_items' => 'Toutes les catégories',
-            'edit_item' => 'Éditer la catégories',
-            'view_item' => 'Voir la catégories',
-            'update_item' => 'Mettre à jour la catégories',
-            'add_new_item' => 'Ajouter une catégories',
-            'new_item_name' => 'Nouvelle catégories',
-            'search_items' => 'Rechercher parmi les catégories',
-            'popular_items' => 'Catégories les plus utilisées')
+            'name' => 'Categories',
+            'singular_name' => 'Categorie',
+            'all_items' => 'Toutes les categories',
+            'edit_item' => 'Éditer la categories',
+            'view_item' => 'Voir la categories',
+            'update_item' => 'Mettre à jour la categories',
+            'add_new_item' => 'Ajouter une categories',
+            'new_item_name' => 'Nouvelle categories',
+            'search_items' => 'Rechercher parmi les categories',
+            'popular_items' => 'Categories les plus utilisées')
     );
     $args = array(
         'labels' => $labels,
         'hierarchical' => true,
     );
-    register_taxonomy( 'catégorie', 'carnets', $args );
+    register_taxonomy( 'categorie', 'carnets', $args );
 }
-add_action( 'init', 'ct_catégorie', 0 );
+add_action( 'init', 'ct_categorie', 0 );
 
 
