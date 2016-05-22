@@ -4,7 +4,6 @@
 */
 ?>
 <?php get_header() ?>
-<body>
 
 <!--<div class="capture-video-jcr">-->
 <!--    <video src="--><?php //bloginfo('template_directory') ?><!--/video/video_accueil_3_v2.mp4" muted="true" autoplay="true"></video>-->
