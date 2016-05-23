@@ -7,18 +7,11 @@
 
 
 <div class="slider vcenter">
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/1.jpg" data-lity>
-                <img src="<?php bloginfo('template_directory')?>/img/1.jpg" alt=""></a>
-        </div>
-    </div>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/2.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/2.jpg" alt=""></a>
-
-        </div></div>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/4.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/4.jpg" alt=""></a>
-
-        </div></div>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/5.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/5.jpg" alt=""></a>
-
-        </div></div>
+    <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
+    <?php while ($my_query->have_posts()) :
+        $my_query->the_post(); ?>
+        <div><div class="image"><a href="<?php the_post_thumbnail_url()?>" data-lity><?php the_post_thumbnail(); ?></a></div></div>
+    <?php endwhile;
+    wp_reset_postdata(); ?>
 </div>
 <?php get_footer(); ?>

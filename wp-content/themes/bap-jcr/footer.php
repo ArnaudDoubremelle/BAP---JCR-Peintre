@@ -3,54 +3,31 @@
 <div class="row">
     <?php get_template_part('template-contact'); ?>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<?php if(!is_page('edition')):?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<?php endif ?>
 <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
-<!--<script src="--><?php //bloginfo( 'template_directory' ); ?><!--/js/jquery.flexisel.js"></script>-->
 <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
-<!--<script src="--><?php //bloginfo( 'template_directory' ); ?><!--/js/cadre.js"></script>-->
 <script src="<?php bloginfo('template_directory'); ?>/js/lity.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/vimeo.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/vivus.min.js"></script>
-
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-<!--<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+<?php if(!is_page('edition')):?>
+    <script src="<?php bloginfo('template_directory'); ?>/js/slick/galerie.js"></script>
+<?php endif?>
+<?php if(is_page('edition')):?>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/jquery.min.1.7.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/jquery-ui-1.8.20.custom.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/turn.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/modernizr.2.5.3.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/hash.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/zoom.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/magazine.min.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/livre/livre.min.js"></script>
+<?php endif ?>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.slider').slick({
-            variableWidth: false,
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 3,
-            variableWidth: false,
-            adaptiveHeight: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
-                        slidesToShow: 1
-                    }
-                }
-            ]
-        });
-    });
+
 </script>
-
-
-
 <?php wp_footer(); ?>
 
 

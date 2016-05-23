@@ -13,10 +13,7 @@
 
 ?>
 <div class="slider vcenter">
-    <div><div class="image"><a href="//vimeo.com/1084537" data-lity>
-                <img src="https://i.vimeocdn.com/video/553159401_1200.jpg" alt=""></a>
-        </div>
-    </div>
+    <a href="//vimeo.com/153001099" data-lity><div id="153001099" class="vimeo "></div></a>
     <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/2.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/2.jpg" alt=""></a>
 
         </div></div>

@@ -13,8 +13,10 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/media.css"/>
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/animate.css"/>
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/lity.css"/>
+    <?php if (is_page('edition')):?>
+        <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/livre.min.css"/>
+    <?php endif?>
 
 
     <?php wp_head(); ?>
@@ -27,6 +29,8 @@
                 class="home"
             <?php elseif ( is_page('reperage') ) : ?>
                 class="atelier"
+            <?php elseif ( is_page('edition') ) : ?>
+                class="edition"
             <?php endif ; ?>>
 <!-- Header -->
 <?php if (!is_page('home') ):?>
@@ -43,9 +47,19 @@
             <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
         </nav>
         <div id="page-content-wrapper">
-            <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
+            <?php if (is_page('reperage') || is_page('edition') ) : ?>
+                <button  class="link-menu white" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
+            <?php else:?>
+                <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
+            <?php endif; ?>
         </div>
-        <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="100px"></a>
+        <?php if (is_page('reperage') || is_page('edition') ) : ?>
+            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="200px" height="100px"></a>
+
+        <?php else:?>
+            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="100px"></a>
+        <?php endif; ?>
+
     </div>
 <!--    <div class="title"></div>-->
 

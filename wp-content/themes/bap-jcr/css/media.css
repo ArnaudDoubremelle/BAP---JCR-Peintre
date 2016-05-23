@@ -42,31 +42,17 @@
 
 /* Small devices (landscape phones, less than 48em)*/
 @media (max-width: 48em) {
-    .cadrecaption{
-        width:100%;
+    .magazine-viewport {
+        height: 38em !important;
+    }
+    .turnjs-slider {
+        width:400px !important;
     }
 }
 
 /* Medium devices (tablets, less than 62em)*/
 @media (max-width: 62em) {
-    .cadrecaption{
 
-        top:85%;
-    }
-    .grid figure p {
-        letter-spacing: 1px;
-        font-size: 0.4em;
-        line-height: 1em;
-    }
-    .grid figure figcaption {
-        padding: 1.5em;
-    }
-    figure.effect-oscar figcaption {
-        padding:1em;
-        background-color: rgba(58,52,42,0.7);
-        -webkit-transition: background-color 0.35s;
-        transition: background-color 0.35s;
-    }
 }
 
 /* Large devices (desktops, less than 75em)*/

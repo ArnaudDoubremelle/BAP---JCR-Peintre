@@ -1,4 +1,5 @@
 <?php
+
 // Cacher la barre admin
 show_admin_bar(false);
 
@@ -122,5 +123,9 @@ function ct_categorie() {
     register_taxonomy( 'categorie', 'carnets', $args );
 }
 add_action( 'init', 'ct_categorie', 0 );
+
+
+
+
 
 
