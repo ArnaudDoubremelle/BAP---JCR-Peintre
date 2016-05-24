@@ -15,7 +15,7 @@
 <a href="peintures">
     <div id="animation">
         <div class="svg">
-            <img src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="50%" height="50%">
+            <img src="<?php bloginfo('template_directory')?>/img/Logo2.svg"  width="50%" height="50%">
         </div>
         <button class="btn btn-intro">Entrer</button>
     </div>
