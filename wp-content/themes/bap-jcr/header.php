@@ -54,10 +54,10 @@
             <?php endif; ?>
         </div>
         <?php if (is_page('reperage') || is_page('edition') ) : ?>
-            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="200px" height="100px"></a>
+            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="150px" height="70px"></a>
 
         <?php else:?>
-            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="100px"></a>
+            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="150px" height="70px"></a>
         <?php endif; ?>
 
     </div>
