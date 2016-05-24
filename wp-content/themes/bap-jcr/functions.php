@@ -1,5 +1,5 @@
 <?php
-
+/* Ajout des scripts JavaScript *
 // Cacher la barre admin
 show_admin_bar(false);
 

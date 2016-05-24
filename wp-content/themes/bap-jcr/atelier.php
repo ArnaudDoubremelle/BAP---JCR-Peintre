@@ -9,40 +9,17 @@
 
 ?>
 <?php get_header()?>
-<?php
 
-?>
+
 <div class="slider vcenter">
-    <a href="//vimeo.com/153001099" data-lity><div id="153001099" class="vimeo "></div></a>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/2.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/2.jpg" alt=""></a>
-
-        </div></div>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/4.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/4.jpg" alt=""></a>
-
-        </div></div>
-    <div><div class="image"><a href="<?php bloginfo('template_directory')?>/img/5.jpg" data-lity><img src="<?php bloginfo('template_directory')?>/img/5.jpg" alt=""></a>
-
-        </div></div>
+    <?php $my_query = new WP_Query(array('post_type' => 'repérage')); ?>
+    <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+        <?php $image = get_field('url_video');?>
+        <?php if(!empty($image)):?>
+        <a href="//vimeo.com/<?php the_field('url_video')?>" data-lity><div id="<?php the_field('url_video')?>" class="vimeo image "></div></a>
+            <?php else : ?>
+        <div><div class="image"><a href="<?php the_post_thumbnail_url()?>" data-lity><?php the_post_thumbnail(); ?></a></div></div>
+            <?php endif;?>
+    <?php endwhile; ?>
 </div>
-
-
-<!--<a href="//vimeo.com/<?php the_field(url_video)?>" data-lity>
-    <div class="col-md-6 col-sm-6  col-xs-12 mg-top">
-        <div class="grid">
-            <figure class="effect-oscar">
-
-                <figcaption>
-                    <h2><?php the_title(); ?></h2>
-                    <div>
-                        <?php the_content() ?>
-                    </div>
-
-                </figcaption>
-            </figure>
-        </div>
-
-    </div>
-</a>-->
-
-
 <?php get_footer()?>
