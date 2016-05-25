@@ -765,6 +765,10 @@ a:hover, a:focus {
   background-color: #333333;
 
 }
+.navbar ul li:last-child {
+  position: absolute;
+  bottom: 0;
+}
 
 .navbar ul li a {
   font-size: 1.2em;
