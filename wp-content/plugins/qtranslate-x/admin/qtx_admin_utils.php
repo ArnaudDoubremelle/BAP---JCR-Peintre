@@ -771,7 +771,7 @@ add_filter('option_blogdescription', 'qtranxf_filter_options_general');
 */
 
 function qtranxf_updateGettextDatabases($force = false, $only_for_language = '') {
-	require_once(QTRANSLATE_DIR.'/admin/qtx_update_gettext_db.php');
+	require_once(QTRANSLATE_DIR . '/admin/qtx_update_gettext_db.php');
 	return qtranxf_updateGettextDatabasesEx($force, $only_for_language);
 }
 

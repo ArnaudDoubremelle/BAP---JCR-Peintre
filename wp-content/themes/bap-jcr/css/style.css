@@ -39,10 +39,10 @@ h1 { font-family: 'sinanova-regularregular', 'Glyphicons Halflings', sans-serif;
 }
 /***************/
 .slick-track {
-  display: flex;
+display: flex;
 }
 .slick-slide {
-  margin: auto auto;
+  margin: auto;
   outline: 0;
 }
 .image {
@@ -52,6 +52,9 @@ h1 { font-family: 'sinanova-regularregular', 'Glyphicons Halflings', sans-serif;
   width: 100%;
   height: auto;
   box-shadow: 1px 5px 12px #313131;
+}
+.slick-slide a{
+  outline: 0 !important;
 }
 .slick-arrow {
   position: absolute;
@@ -1028,6 +1031,20 @@ a:hover, a:focus {
 }
 #wpseo_content table tbody tr th td:last-child{
   display: none;
+}
+/*****CONTACT**/
+.wpcf7-submit{
+  border-color: black;
+  background-color: black;
+  border-radius: 0px;
+}
+.wpcf7-textarea {
+  border-color: black;
+  border-radius: 0px;
+}
+.wpcf7-text{
+  border-color: black;
+  border-radius: 0px;
 }
 
 

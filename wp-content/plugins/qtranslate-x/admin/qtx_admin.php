@@ -1,10 +1,10 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) exit;
 
-require_once(QTRANSLATE_DIR.'/admin/qtx_admin_options.php');
-require_once(QTRANSLATE_DIR.'/admin/qtx_languages.php');
-require_once(QTRANSLATE_DIR.'/admin/qtx_admin_class_translator.php');
-require_once(QTRANSLATE_DIR.'/admin/qtx_user_options.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_admin_options.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_languages.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_admin_class_translator.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_user_options.php');
 
 function qtranxf_collect_translations_deep( $qfields, $sep ) {
 	$content = reset($qfields);
@@ -178,7 +178,7 @@ function qtranxf_admin_init(){
 		//&& !empty($_POST) //todo run this only if one of the forms or actions submitted
 	){
 		$q_config['url_info']['qtranslate-settings-url'] = admin_url('options-general.php?page=qtranslate-x');
-		require_once(QTRANSLATE_DIR.'/admin/qtx_admin_options_update.php');
+		require_once(QTRANSLATE_DIR . '/admin/qtx_admin_options_update.php');
 		//call_user_func('qtranxf_editConfig');
 		qtranxf_editConfig();
 	}
@@ -588,7 +588,7 @@ function qtranxf_customize_controls_print_footer_scripts() {
 
 /** @since 3.4 */
 function qtranxf_settings_page() {
-	require_once(QTRANSLATE_DIR.'/admin/qtx_configuration.php');
+	require_once(QTRANSLATE_DIR . '/admin/qtx_configuration.php');
 	qtranxf_conf();
 }
 

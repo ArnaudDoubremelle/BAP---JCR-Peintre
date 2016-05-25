@@ -29,6 +29,3 @@
 
 
 <?php get_footer()?>
-<script>
-    new Vivus('my-svg', {type: 'delayed', duration: 200},console.log('salut'));
-</script>

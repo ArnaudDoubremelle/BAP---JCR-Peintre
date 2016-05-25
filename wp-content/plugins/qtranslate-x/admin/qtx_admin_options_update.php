@@ -1,8 +1,8 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) exit;
 
-require_once(QTRANSLATE_DIR.'/admin/qtx_admin_options.php');
-require_once(QTRANSLATE_DIR.'/admin/qtx_import_export.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_admin_options.php');
+require_once(QTRANSLATE_DIR . '/admin/qtx_import_export.php');
 
 function qtranxf_editConfig(){
 	global $q_config;
