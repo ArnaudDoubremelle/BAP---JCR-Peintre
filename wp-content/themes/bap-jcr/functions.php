@@ -8,6 +8,8 @@ add_theme_support( 'post-thumbnails' );
 
 // Ajouter un menu
 register_nav_menu('principal', 'Menu principal');
+// Ajouter un menu
+register_nav_menu('langues', 'Switch Langues');
 
 add_action( 'nav_menu_css_class', 'menu_item_classes', 10, 3 );
 function menu_item_classes( $classes, $item, $args ) {
@@ -55,6 +57,7 @@ function create_post_type() {
                 'singular_name' => 'Peintures'
             ),
             'public' => true,
+            'taxonomies' => array( 'serie' ),
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
@@ -65,6 +68,7 @@ function create_post_type() {
                 'singular_name' => 'Carnets'
             ),
             'public' => true,
+            'taxonomies' => array( 'categorie' ),
             'supports' => array('thumbnail', 'editor', 'title')
         )
     );
@@ -97,7 +101,7 @@ register_taxonomy(
             'search_items' => 'Rechercher parmi les series',
             'popular_items' => 'Series les plus utilisées'
         ),
-        'hierarchical' => true   ) );
+        'hierarchical' => false   ) );
 
 register_taxonomy_for_object_type( 'series', 'peintures' );
 
@@ -119,6 +123,12 @@ function ct_categorie() {
     $args = array(
         'labels' => $labels,
         'hierarchical' => true,
+        'public' => true,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'show_in_nav_menus' => true,
+        'show_tagcloud' => true,
+        'query_var' => 'categorie',
     );
     register_taxonomy( 'categorie', 'carnets', $args );
 }
