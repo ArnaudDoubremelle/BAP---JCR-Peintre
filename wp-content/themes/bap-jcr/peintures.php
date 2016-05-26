@@ -22,16 +22,28 @@ $my_query->the_post(); ?>
 <div id="<?php echo $post->post_name ?>" class="port">
     <div class="container">
         <a href="#" class="close"></a>
-        <div class="row">
-            <div class="col-md-offset-2 col-md-5 single-post">
-                <?php the_post_thumbnail('', array( 'class'	=> "single-img")); ?>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-md-4 single-post">
-                <h3><?php the_title() ?></h3>
-                <?php the_content(); ?>
-            </div>
+        <div class="row single-post">
+            <div class="col-md-12 single-content">
+                <div class="col-md-8">
+                    <?php the_post_thumbnail('', array( 'class'	=> " shadow img-responsive center-block")); ?>
+                </div>
+                <div class="col-md-4 single-content">
+                    <div class="single-border text-center">
+                        <h3 class="single-title"><?php the_title() ?></h3>
+                        <div class="inherit">
+                            <?php the_content(); ?>
+                            <p><?php the_terms( $post->ID, 'series', 'Série : ' ); ?><br></p>
+                            <?php $prix=get_field('prix');?>
+                            <?php if(!empty($prix)):?>
+                                <p> <?php _e("[:en]Price[:fr] Prix[:]"); ?> : <?php the_field('prix')?></p>
+                                <?php else:?>
+                                <p></p>
+                            <?php endif;?>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div> <!-- / row -->

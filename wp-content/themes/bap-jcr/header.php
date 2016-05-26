@@ -45,20 +45,21 @@
                 <?php endif; ?>
             </ul>
             <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'langues')); ?>
         </nav>
         <div id="page-content-wrapper">
             <?php if (is_page('reperage') || is_page('edition') ) : ?>
+                <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="200px" height="70px"></a>
                 <button  class="link-menu white" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
-            <?php else:?>
+                <?php elseif ( !is_archive() ) : ?>
+                <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="70px"></a>
                 <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php echo get_the_title() ?></span><i class="icon-menu fa fa-bars"></i></button>
+                <?php else:?>
+                <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="70px"></a>
+                <button  class="link-menu" data-toggle="offcanvas"><span class="txt-menu"><?php single_term_title()?></span><i class="icon-menu fa fa-bars"></i></button>
             <?php endif; ?>
         </div>
-        <?php if (is_page('reperage') || is_page('edition') ) : ?>
-            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="200px" height="70px"></a>
 
-        <?php else:?>
-            <a href="<?php echo get_home_url() ; ?>"><img id="logsvg" src="<?php bloginfo('template_directory')?>/img/Logo.svg"  width="200px" height="70px"></a>
-        <?php endif; ?>
 
     </div>
 <!--    <div class="title"></div>-->
