@@ -37,8 +37,9 @@ $(document).ready(function() {
 // -------------------- Lightbox single
 
   $('.slider .image a').click(function() {
-    var itemID = $(this).attr('href');
-    $(itemID).addClass('item_open');
+    var itemID = $(this).attr('class');
+    console.log(itemID);
+    $('#'+itemID).addClass('item_open');
     return false;
   });
   $('.close').click(function() {
