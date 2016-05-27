@@ -383,26 +383,6 @@ a:hover, a:focus {
 
 }
 
-/*.single-content {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translate(0%, -50%);
-  right: 5%;
-  width: 20%;
-}*/
-
-/*.singlepaint {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.singlepaint p {
-  text-align: center !important;
-  margin: 0;
-}*/
 /*HOME*/
 .capture-video-jcr {
   position: absolute;
@@ -708,9 +688,8 @@ a:hover, a:focus {
   width: 100%;
   border-top: 1px solid  #333333;
 }
-.navbar ul li a:hover {
+.navbar ul .menu-item a:hover {
   background-color: #333333;
-
 }
 
 .navbar ul li a {
