@@ -10,7 +10,6 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/main.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/lity.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/vimeo.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/share-button.js"></script>
 <?php if(!is_page('edition')):?>
     <script src="<?php bloginfo('template_directory'); ?>/js/slick/galerie.js"></script>
