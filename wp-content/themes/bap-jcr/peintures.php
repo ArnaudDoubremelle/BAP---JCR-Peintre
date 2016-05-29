@@ -11,7 +11,7 @@
     <?php $my_query = new WP_Query(array('post_type' => 'peintures', 'orderby' => 'title', 'order'   => 'DESC')); ?>
     <?php while ($my_query->have_posts()) :
     $my_query->the_post(); ?>
-        <div><div class="image"><a class="<?php echo $post->post_name ?>" href="<?php echo the_permalink(7).'#'.$post->post_name ?>"><?php the_post_thumbnail(); ?></a></div></div>
+        <div><div class="image"><a class="<?php echo $post->post_name ?>" href="<?php echo /* the_permalink(7).*/'#'.$post->post_name ?>"><?php the_post_thumbnail(); ?></a></div></div>
     <?php endwhile;
     wp_reset_postdata(); ?>
 </div>
