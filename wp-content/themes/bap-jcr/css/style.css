@@ -171,14 +171,15 @@ display: flex;
 }
 
 .btn-intro {
+  font-size: 28px;
   color: #fff;
-  letter-spacing: 7px;
+  letter-spacing: 6px;
   text-align: center;
   background-color: transparent;
   transition: 0.2s ease-in;
 }
 .btn-intro:hover, .btn-intro:focus {
-  color: #797979;
+  color: #fff;
   outline: none !important;
 }
 
@@ -560,6 +561,75 @@ a:hover, a:focus {
   border-radius: 2px;
 }
 /* Ink Transition */
+#animation {
+  display: block;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  overflow: hidden;
+  padding: 1px;
+  opacity: 1;
+  -webkit-animation: animation 3.5s ease; /* Safari 3.5+ */
+  -moz-animation:    animation 3.5s ease; /* Fx 5+ */
+  -o-animation:      animation 3.5s ease; /* Opera 12+ */
+  animation:         animation 3.5s ease; /* IE 10+, Fx 29+ */
+}
+.img-intro {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../img/palette.jpg") no-repeat;
+  background-size: cover;
+  animation: intro 3.5s ease; /* IE 10+, Fx 29+ */
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes animation {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@-moz-keyframes animation {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@-o-keyframes animation {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@keyframes animation {
+  0%   { opacity: 0;
+    -webkit-filter: blur(2px);}
+
+  100% { opacity: 1;
+    -webkit-filter: blur(0px);}
+}
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cd-transition-layer {
   position: fixed;
   top: 0;

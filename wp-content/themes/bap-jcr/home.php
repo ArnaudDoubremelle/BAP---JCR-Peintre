@@ -5,26 +5,33 @@
 ?>
 <?php get_header() ?>
 
-<!--<div class="capture-video-jcr">-->
-<!--    <video src="--><?php //bloginfo('template_directory') ?><!--/video/video_accueil_3_v2.mp4" muted="true" autoplay="true"></video>-->
-<!--    <div class="language">-->
-<!--        <a href="peintures" class="btn btn-custom"><img src="--><?php //bloginfo('template_directory') ?><!--/img/door.png" alt=""></a>-->
-<!--    </div>-->
-<!--</div>-->
-
-<a href="peintures">
-    <div id="animation">
-        <div class="svg">
-            <img src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="50%" height="50%">
+    <a href="peintures">
+        <div id="animation">
+            <div class="svg">
+                <img src="<?php bloginfo('template_directory')?>/img/logoblanc.svg"  width="50%" height="50%">
+            </div>
+            <button class="btn btn-intro">Entrer</button>
         </div>
-        <button class="btn btn-intro">Entrer</button>
+    </a>
+
+    <div class="img-intro"></div>
+
+    <div class="cd-transition-layer">
+        <div class="bg-layer"></div>
     </div>
-</a>
 
-
-<div class="cd-transition-layer">
-    <div class="bg-layer"></div>
-</div> <!-- .cd-transition-layer -->
+<!--<a href="peintures">-->
+<!--    <div id="animation">-->
+<!--        <div class="svg">-->
+<!--            <img src="--><?php //bloginfo('template_directory')?><!--/img/logoblanc.svg"  width="50%" height="50%">-->
+<!--        </div>-->
+<!--        <button class="btn btn-intro">Entrer</button>-->
+<!--    </div>-->
+<!--</a>-->
+<!---->
+<!--<div class="cd-transition-layer">-->
+<!--    <div class="bg-layer"></div>-->
+<!--</div> <!-- .cd-transition-layer -->-->
 
 
 

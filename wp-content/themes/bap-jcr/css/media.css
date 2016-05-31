@@ -1,4 +1,11 @@
 @media screen and (max-width: 767px) {
+    #animation {
+        width: 90%;
+        height: auto;
+    }
+    .btn-intro {
+        bottom: -1%;
+    }
     .txt-menu {
         margin: 0;
         display: none;
