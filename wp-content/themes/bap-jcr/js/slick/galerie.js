@@ -1,8 +1,7 @@
 var $=jQuery;
 $(document).ready(function () {
     $('.slider').slick({
-        variableWidth: false,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '60px',
         slidesToShow: 3,
         variableWidth: false,

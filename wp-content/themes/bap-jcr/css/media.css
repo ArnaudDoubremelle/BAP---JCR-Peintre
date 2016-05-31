@@ -58,7 +58,21 @@
         width:400px !important;
     }
 }
+@media screen and (max-width: 767px) {
+    h1 {
+        margin-top: 33px;
+        font-size: 16px;
+    }
+    .fa-3x{
+        font-size: 1em;
+    }
+    .play{
+        color: rgba(0,0,0, 0.8);
+        position: absolute;
+        top: 45%;
+    }
 
+}
 /* Medium devices (tablets, less than 62em)*/
 @media (max-width: 62em) {
     .single-border{

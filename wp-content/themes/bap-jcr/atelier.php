@@ -16,7 +16,14 @@
         <?php if(empty($image)):?>
             <div><div class="image"><a href="<?php the_post_thumbnail_url()?>" data-lity><?php the_post_thumbnail(); ?></a></div></div>
         <?php else : ?>
-            <div><div class="image"><a href="//vimeo.com/<?php the_field('url_video')?>" data-lity><?php the_post_thumbnail(); ?></a></div></div>
+            <div>
+                <div class="image">
+
+                    <a href="//vimeo.com/<?php the_field('url_video')?>" data-lity>
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                </div>
+            </div>
         <?php endif;?>
     <?php endwhile; ?>
 </div>
