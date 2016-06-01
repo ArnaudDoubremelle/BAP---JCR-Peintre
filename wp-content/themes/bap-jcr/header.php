@@ -46,8 +46,6 @@
                 <?php endif; ?>
             </ul>
             <?php wp_nav_menu(array('theme_location' => 'principal')); ?>
-
-            <share-button></share-button>
             <?php wp_nav_menu(array('theme_location' => 'langues')); ?>
         </nav>
         <div id="page-content-wrapper">

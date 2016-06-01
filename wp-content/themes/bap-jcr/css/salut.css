@@ -1,13 +1,9 @@
 share-button {
-    bottom:3.7em;
+
     line-height: 20px;
-    border-top: 1px solid #333333;
-    width: inherit;
-    position: absolute;
     font-size: 1.2em;
     color: #dddddd;
     display: block;
-    padding: 20px 0px 20px 30px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
@@ -98,9 +94,9 @@ share-button .sb-social.sb-right.sb-middle {
 }
 share-button .sb-social.sb-right.sb-bottom {
     bottom: 0;
-    -webkit-transform: translate(-30px, 100%);
-    -ms-transform: translate(-30px, 100%);
-    transform: translate(-30px, 100%);
+    -webkit-transform: translate(30px, 100%);
+    -ms-transform: translate(30px, 100%);
+    transform: translate(30px, 100%);
 }
 share-button .sb-social.sb-right.active.sb-top {
     top: -1em;
@@ -193,7 +189,10 @@ share-button .sb-social ul li.disabled {
 share-button .sb-social ul li{
     opacity: 0.5;
 }
-share-button .sb-social ul li:hover{
+share-button .sb-social.sb-center.active.sb-top {
+    top: 7em;
+}
+.menu-langue-container share-button .sb-social ul li a:hover{
     opacity: 1;
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);

@@ -1,6 +1,6 @@
 var config = {
     ui: {
-        buttonText: 'Partagez', // change the text of the button, [Default: `Share`]
+        buttonText: 'Partager', // change the text of the button, [Default: `Share`]
     },
     networks: {
         googlePlus: {
