@@ -759,10 +759,12 @@ a:hover, a:focus {
   display: none;
 }
 /*****CONTACT**/
-.wpcf7-submit{
-  border-color: black;
-  background-color: black;
-  border-radius: 0px;
+.wpcf7-submit {
+  background: url("../img/tache.jpg");
+  background-size: 190% 196%;
+  background-position: 50% 40%;
+  padding: 10px 30px;
+  border: none;
 }
 .wpcf7-textarea {
   border-color: black;
