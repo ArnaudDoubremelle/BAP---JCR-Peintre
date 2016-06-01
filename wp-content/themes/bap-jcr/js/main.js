@@ -79,6 +79,11 @@ $(document).ready(function() {
       modalWindow.addClass('visible');
     }, delay);
 
+    $(".img-intro, #animation").delay(200).fadeIn(2000);
+    $( ".btn-intro" ).animate({
+      opacity: 1
+    }, 1000);
+
   };
 
   //close modal window

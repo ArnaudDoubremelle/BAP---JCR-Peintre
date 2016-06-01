@@ -184,6 +184,7 @@ display: flex;
 }
 
 .btn-intro {
+  opacity: 0;
   font-size: 28px;
   color: #fff;
   letter-spacing: 6px;
@@ -576,7 +577,7 @@ a:hover, a:focus {
 }
 /* Ink Transition */
 #animation {
-  display: block;
+  display: none;
   z-index: 4;
   position: absolute;
   top: 50%;
@@ -587,15 +588,14 @@ a:hover, a:focus {
   text-align: center;
   overflow: hidden;
   padding: 1px;
-  opacity: 1;
-  -webkit-animation: animation 3.5s ease; /* Safari 3.5+ */
-  -moz-animation:    animation 3.5s ease; /* Fx 5+ */
-  -o-animation:      animation 3.5s ease; /* Opera 12+ */
-  animation:         animation 3.5s ease; /* IE 10+, Fx 29+ */
+  /*opacity: 1;*/
+  /*-webkit-animation: animation 3.5s ease; !* Safari 3.5+ *!*/
+  /*-moz-animation:    animation 3.5s ease; !* Fx 5+ *!*/
+  /*-o-animation:      animation 3.5s ease; !* Opera 12+ *!*/
+  /*animation:         animation 3.5s ease; !* IE 10+, Fx 29+ *!*/
 }
 .img-intro {
-  opacity: 0;
-  display: block;
+  display: none;
   position: absolute;
   z-index: 3;
   top: 0;
@@ -604,9 +604,9 @@ a:hover, a:focus {
   width: 100%;
   background: url("../img/palette.jpg") no-repeat;
   background-size: cover;
-  animation: intro 3.5s ease; /* IE 10+, Fx 29+ */
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+  /*animation: intro 3.5s ease; !* IE 10+, Fx 29+ *!*/
+  /*animation-delay: 0.5s;*/
+  /*animation-fill-mode: forwards;*/
 }
 @-webkit-keyframes animation {
   0%   { opacity: 0;
