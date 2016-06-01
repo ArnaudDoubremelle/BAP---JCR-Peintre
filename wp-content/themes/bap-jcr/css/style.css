@@ -190,6 +190,7 @@ display: flex;
   text-align: center;
   background-color: transparent;
   transition: 0.2s ease-in;
+  text-shadow: 2px 2px 8px #000;
 }
 .btn-intro:hover, .btn-intro:focus {
   color: #fff;
