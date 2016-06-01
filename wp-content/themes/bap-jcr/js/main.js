@@ -71,7 +71,7 @@ $(document).ready(function() {
   });
 
   //open modal window
-  window.onload = function(event){
+  $(window).load(function(event) {
     event.preventDefault();
     transitionLayer.addClass('visible opening');
     var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 600;
@@ -84,7 +84,7 @@ $(document).ready(function() {
       opacity: 1
     }, 1000);
 
-  };
+    });
 
   //close modal window
   // modalWindow.on('click', '.modal-close', function(event){
